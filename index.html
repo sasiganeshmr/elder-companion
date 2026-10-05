@@ -908,33 +908,12 @@
       </div>
 
       <!-- Video Feed Grid (Senior Krishnan Ayya & Volunteer Karthik) -->
-      <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow bg-slate-900 relative">
-
-        <!-- Feed 1: Volunteer (Karthik Subramanian) -->
-        <div class="relative bg-slate-800 rounded-2xl overflow-hidden aspect-video flex items-center justify-center border-2 border-indigo-500/50 shadow-inner">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=300&q=80" 
-               alt="Karthik Subramanian" class="w-full h-full object-cover">
-          <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur px-3 py-1 rounded-full text-xs font-medium flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span>கார்த்திக் (கவனமாகக் கேட்கிறார்)</span>
-          </div>
-          <!-- Waveform Pulse -->
-          <div class="absolute top-3 right-3 flex items-center gap-1 bg-slate-950/70 px-2 py-1 rounded-lg">
-            <div class="w-1 h-3 bg-emerald-400 animate-pulse"></div>
-            <div class="w-1 h-5 bg-emerald-400 animate-pulse delay-75"></div>
-            <div class="w-1 h-2 bg-emerald-400 animate-pulse delay-150"></div>
-          </div>
-        </div>
-
-        <!-- Feed 2: Senior (Krishnan Ramaswamy) -->
-        <div class="relative bg-slate-800 rounded-2xl overflow-hidden aspect-video flex items-center justify-center border-2 border-amber-500/50 shadow-inner">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=300&q=80" 
-               alt="Krishnan Ramaswamy" class="w-full h-full object-cover">
-          <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur px-3 py-1 rounded-full text-xs font-medium flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-            <span>கிருஷ்ணன் ஐயா (புன்னகையுடன் பேசுகிறார்)</span>
-          </div>
-        </div>
+      <div class="w-full flex-grow relative bg-slate-900 min-h-[50vh] flex flex-col" id="jitsiMeetContainer">
+        <!-- Jitsi Iframe will be injected here automatically by the Javascript -->
+      </div>
+      
+      <!-- Subtitles and Reactions Container (Positioned absolutely over Jitsi if needed) -->
+      <div class="relative w-full pointer-events-none">
 
         <!-- Floating Reactions Container -->
         <div id="reactionsOverlay" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
