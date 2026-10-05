@@ -136,36 +136,79 @@ class ElderCompanionHandler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
+        FIREBASE_URL = "https://elder-companion-b22dc-default-rtdb.firebaseio.com"
         if self.path == "/api/log-session":
             content_length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(content_length).decode("utf-8")
-            data = json.loads(body) if body else {}
             
+            try:
+                req = urllib.request.Request(f"{FIREBASE_URL}/nss_sessions.json", data=body.encode('utf-8'), method="POST")
+                req.add_header('Content-Type', 'application/json')
+                urllib.request.urlopen(req)
+            except Exception as e:
+                print("Firebase Error:", e)
+
             self.send_response(201)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
-            response = {
-                "success": True,
-                "message": "NSS / University youth community service session successfully certified.",
-                "data": data
-            }
-            self.wfile.write(json.dumps(response).encode("utf-8"))
+            self.wfile.write(json.dumps({"success": True}).encode("utf-8"))
             return
         elif self.path in ["/api/save-kadhai", "/api/save-kahaani"]:
             content_length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(content_length).decode("utf-8")
-            data = json.loads(body) if body else {}
+            
+            try:
+                req = urllib.request.Request(f"{FIREBASE_URL}/kadhai_stories.json", data=body.encode('utf-8'), method="POST")
+                req.add_header('Content-Type', 'application/json')
+                urllib.request.urlopen(req)
+            except Exception as e:
+                print("Firebase Error:", e)
+
             self.send_response(201)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
-            response = {
-                "success": True,
-                "message": "Oral history safely preserved in Kadhai Petti with automated Tamil & English transcription.",
-                "storyId": f"kp-{len(MOCK_KADHAI_STORIES) + 1}"
-            }
-            self.wfile.write(json.dumps(response).encode("utf-8"))
+            self.wfile.write(json.dumps({"success": True}).encode("utf-8"))
+            return
+        
+        elif self.path == "/api/send-otp":
+            content_length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(content_length).decode("utf-8")
+            data = json.loads(body) if body else {}
+            phone_num = data.get("phone", "")
+
+            # Twilio integration using Environment Variables
+            twilio_sid = os.environ.get("TWILIO_SID", "")
+            twilio_token = os.environ.get("TWILIO_TOKEN", "")
+            twilio_from = os.environ.get("TWILIO_FROM", "")
+
+            if twilio_sid and twilio_token and twilio_from:
+                import urllib.parse
+                import base64
+                
+                twilio_url = f"https://api.twilio.com/2010-04-01/Accounts/{twilio_sid}/Messages.json"
+                twilio_data = urllib.parse.urlencode({
+                    "To": f"+91{phone_num}",
+                    "From": twilio_from,
+                    "Body": "Your Elder Companion login OTP is 8821."
+                }).encode("utf-8")
+                
+                auth_string = f"{twilio_sid}:{twilio_token}"
+                auth_b64 = base64.b64encode(auth_string.encode("utf-8")).decode("utf-8")
+                
+                try:
+                    req = urllib.request.Request(twilio_url, data=twilio_data, method="POST")
+                    req.add_header("Authorization", f"Basic {auth_b64}")
+                    urllib.request.urlopen(req)
+                except Exception as e:
+                    print("Twilio SMS Error:", e)
+
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(json.dumps({"success": True}).encode("utf-8"))
             return
         
         self.send_response(404)

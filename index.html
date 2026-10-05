@@ -1127,6 +1127,7 @@
     let verifiedHours = 22.5;
     let isKadhaiRecording = false;
     let kadhaiCloseTimer = null;
+    let jitsiApi = null;
 
     // Subtitle stream in Tamil & English (Tanglish & Tamil)
     const simulatedSubtitles = [
@@ -1168,7 +1169,16 @@
 
     function simulateSendOtp() {
       const num = document.getElementById('seniorMobileInput').value;
-      announce("OTP '8821' sent to +91 " + num + ". Auto-verifying for convenience...");
+      announce("OTP '8821' sent to +91 " + num + ".");
+      
+      try {
+        fetch('/api/send-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: num })
+        });
+      } catch(e) {}
+
       setTimeout(() => {
         demoLogin('senior');
       }, 1200);
@@ -1289,13 +1299,49 @@
       }
     }
 
-    // CALL ROOM SIMULATION
+    // CALL ROOM SIMULATION WITH REAL JITSI WEBRTC
     function startCall(partnerName, topic, fromRole) {
       document.getElementById('callPartnerName').textContent = partnerName;
       document.getElementById('callTopicBadge').textContent = "தலைப்பு: " + topic;
       document.getElementById('callModal').classList.remove('hidden');
 
-      callSeconds = 225;
+      // Initialize Jitsi WebRTC Room
+      const container = document.getElementById('jitsiMeetContainer');
+      if (container) {
+        container.innerHTML = ''; // Clear container
+        if (jitsiApi) { jitsiApi.dispose(); jitsiApi = null; }
+        
+        const domain = 'meet.jit.si';
+        const options = {
+            roomName: 'ElderCompanion_SafeRoom_9812',
+            width: '100%',
+            height: '100%',
+            parentNode: container,
+            userInfo: {
+                displayName: currentRole === 'senior' ? 'முதியோர் (Senior)' : 'தன்னார்வலர் (Volunteer)'
+            },
+            configOverwrite: { 
+               startWithAudioMuted: false, 
+               startWithVideoMuted: false,
+               prejoinPageEnabled: false
+            }
+        };
+        try {
+          jitsiApi = new JitsiMeetExternalAPI(domain, options);
+          jitsiApi.addEventListener('audioMuteStatusChanged', function (data) {
+             isMuted = data.muted;
+             const btn = document.getElementById('muteBtnText');
+             if (btn) btn.textContent = isMuted ? 'Unmute' : 'Mute';
+          });
+          jitsiApi.addEventListener('videoConferenceLeft', function () {
+             endCall(); // Auto end call if they hang up inside Jitsi
+          });
+        } catch (e) {
+          console.error("Jitsi API failed to load", e);
+        }
+      }
+
+      callSeconds = 0;
       updateCallTimer();
       if (callTimerInterval) clearInterval(callTimerInterval);
       callTimerInterval = setInterval(() => {
@@ -1337,29 +1383,38 @@
     }
 
     function requestSpeakSlower() {
-      announce("Polite reminder sent: 'கொஞ்சம் மெதுவாகப் பேசுங்கள் (Please speak slowly)'");
-      document.getElementById('liveSubtitleText').textContent = "⚠️ [System Notice]: Volunteer was gently requested to speak slowly and clearly.";
+      document.getElementById('liveSubtitleText').textContent = "⚠️ கார்த்திக், தயவுசெய்து மெதுவாகப் பேசுங்கள்... (Requested to speak slower)";
+      if (jitsiApi) jitsiApi.executeCommand('sendChatMessage', 'தயவுசெய்து மெதுவாகப் பேசுங்கள் (Please speak slower)', '', true);
     }
 
     function sendCulturalReaction(symbol, name) {
       const overlay = document.getElementById('reactionsOverlay');
-      const react = document.createElement('div');
-      react.textContent = symbol;
-      react.className = "absolute text-4xl animate-float";
-      react.style.left = (35 + Math.random() * 30) + "%";
-      react.style.bottom = "20%";
-      overlay.appendChild(react);
-      setTimeout(() => react.remove(), 1900);
+      const emoji = document.createElement('div');
+      emoji.textContent = symbol;
+      emoji.className = "absolute bottom-10 left-1/2 -translate-x-1/2 text-6xl animate-[bounce_2s_ease-out_forwards] opacity-0";
+      overlay.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 2000);
+      document.getElementById('liveSubtitleText').textContent = `✨ நீங்கள் '${name}' அனுப்பினீர்கள்!`;
+      
+      if (jitsiApi) {
+          try { jitsiApi.executeCommand('sendEndpointTextMessage', '', `Reaction: ${symbol} ${name}`); } catch(e){}
+      }
     }
 
+    let isMuted = false;
     function toggleAudioMute() {
-      const text = document.getElementById('muteBtnText');
-      if (text.textContent === 'Mute') {
-        text.textContent = 'Unmute';
-        announce("மைக் அணைக்கப்பட்டது.");
+      if (jitsiApi) {
+        jitsiApi.executeCommand('toggleAudio');
       } else {
-        text.textContent = 'Mute';
-        announce("மைக் இயக்கத்தில் உள்ளது.");
+        isMuted = !isMuted;
+        const btn = document.getElementById('muteBtnText');
+        if (isMuted) {
+          btn.textContent = 'Unmute';
+          announce("மைக் முடக்கப்பட்டுள்ளது (Muted).");
+        } else {
+          btn.textContent = 'Mute';
+          announce("மைக் இயக்கத்தில் உள்ளது.");
+        }
       }
     }
 
@@ -1372,6 +1427,12 @@
       if (subtitleInterval) clearInterval(subtitleInterval);
       document.getElementById('callModal').classList.add('hidden');
       
+      // Clean up Jitsi
+      if (jitsiApi) {
+        jitsiApi.dispose();
+        jitsiApi = null;
+      }
+
       // Reset mute state for next call
       isMuted = false;
       document.getElementById('muteBtnText').textContent = 'Mute';
@@ -1381,6 +1442,18 @@
       document.getElementById('certHoursNumber').textContent = verifiedHours.toFixed(1) + " மணிநேரம் (Verified Hours)";
 
       announce("அழைப்பு நிறைவடைந்தது. 30 நிமிடங்கள் NSS சமூக சேவைக் கணக்கில் வரவு வைக்கப்பட்டது!");
+
+      try {
+        fetch('/api/log-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            volunteer: 'Karthik Subramanian',
+            duration_minutes: 30,
+            date: new Date().toISOString()
+          })
+        });
+      } catch(e) {}
     }
 
     // KADHAI PETTI ORAL HISTORY RECORDING
@@ -1409,6 +1482,18 @@
         label.textContent = "புதிய கதையைப் பதிவு செய்க";
         live.textContent = "ஏ.ஐ. மூலம் தமிழ் & ஆங்கில எழுத்து வடிவம் உருவாக்கப்பட்டு குடும்பத்திற்கு அனுப்பப்பட்டது.";
         kadhaiCloseTimer = setTimeout(closeKadhaiModal, 2500);
+
+        try {
+          fetch('/api/save-kadhai', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              title: 'New Story Recording',
+              narrator: 'Thiru. Krishnan Ramaswamy',
+              date: new Date().toISOString()
+            })
+          });
+        } catch(e) {}
       }
     }
 
