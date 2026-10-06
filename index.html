@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elder Companion (முதியோர் தோழன்) - தமிழ் & English</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
   <!-- Allowlisted Tailwind CSS -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
@@ -64,22 +64,22 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans transition-all duration-200" id="appBody">
+<body class="bg-white text-gray-800 min-h-screen flex flex-col font-sans transition-all duration-200" id="appBody">
 
   <!-- ========================================================================= -->
   <!-- 0. INNOVATIVE LOGIN PORTAL (TAMIL & ENGLISH)                              -->
   <!-- ========================================================================= -->
-  <section id="loginView" class="min-h-screen flex items-center justify-center p-4 bg-slate-50">
-    <div class="w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100 grid grid-cols-1 md:grid-cols-12">
+  <section id="loginView" class="min-h-screen flex items-center justify-center p-4 bg-white">
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-12">
       
       <!-- Left Hero Banner -->
-      <div class="md:col-span-5 bg-slate-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+      <div class="md:col-span-5 bg-gray-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
         <div class="relative z-10">
-          <div class="inline-flex items-center gap-2 bg-blue-900/30 text-blue-200 px-3 py-1 rounded-full text-xs font-semibold border border-blue-700/50 mb-6">
+          <div class="inline-flex items-center gap-2 bg-blue-900/30 text-blue-200 px-3 py-1 rounded-md text-xs font-semibold border border-blue-700/50 mb-6">
              தமிழ்நாடு தலைமுறை இணைப்புத் திட்டம்
           </div>
-          <div class="w-14 h-14 bg-amber-400 text-slate-900 rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg mb-4">
-            🤝
+          <div class="w-14 h-14 bg-amber-400 text-gray-900 rounded-lg flex items-center justify-center text-3xl font-black shadow-sm mb-4">
+            
           </div>
           <h1 class="text-3xl font-extrabold tracking-tight">Elder Companion</h1>
           <p class="text-blue-200 font-semibold text-sm mt-0.5">முதியோர் தோழன் • Periyavar Thozhan</p>
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Background glow decoration -->
-        <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-blue-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-blue-600/20 rounded-md blur-3xl"></div>
       </div>
 
       <!-- Right Login Interactive Forms -->
@@ -112,24 +112,24 @@
         
         <!-- Role Selection Tabs -->
         <div>
-          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center justify-between pb-3 border-b border-gray-100">
             <div>
-              <h2 class="text-xl font-bold text-slate-900" id="loginFormTitle">நல்வரவு / Welcome</h2>
-              <p class="text-xs text-slate-500">உள்நுழைய உங்கள் பகுதியைத் தேர்ந்தெடுக்கவும்</p>
+              <h2 class="text-xl font-bold text-gray-900" id="loginFormTitle">நல்வரவு / Welcome</h2>
+              <p class="text-xs text-gray-500">உள்நுழைய உங்கள் பகுதியைத் தேர்ந்தெடுக்கவும்</p>
             </div>
-            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Secure 256-bit</span>
+            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-md">Secure 256-bit</span>
           </div>
 
           <!-- Role Toggle Buttons -->
-          <div class="grid grid-cols-3 gap-2 bg-slate-100 p-1.5 rounded-2xl mt-4">
-            <button onclick="setLoginRole('senior')" id="tabSeniorLogin" class="py-2 px-2 text-xs font-bold rounded-xl transition-all bg-amber-400 text-slate-950 shadow-sm text-center">
-              👴 முதியோர் (Senior)
+          <div class="grid grid-cols-3 gap-2 bg-gray-100 p-1.5 rounded-lg mt-4">
+            <button onclick="setLoginRole('senior')" id="tabSeniorLogin" class="py-2 px-2 text-xs font-bold rounded-lg transition-all bg-amber-400 text-gray-950 shadow-sm text-center">
+               முதியோர் (Senior)
             </button>
-            <button onclick="setLoginRole('volunteer')" id="tabVolunteerLogin" class="py-2 px-2 text-xs font-semibold rounded-xl transition-all text-slate-600 hover:text-slate-900 text-center">
-              🎓 இளைஞர் (Youth)
+            <button onclick="setLoginRole('volunteer')" id="tabVolunteerLogin" class="py-2 px-2 text-xs font-semibold rounded-lg transition-all text-gray-600 hover:text-gray-900 text-center">
+               இளைஞர் (Youth)
             </button>
-            <button onclick="setLoginRole('caregiver')" id="tabCaregiverLogin" class="py-2 px-2 text-xs font-semibold rounded-xl transition-all text-slate-600 hover:text-slate-900 text-center">
-              🛡️ குடும்பம் (Family)
+            <button onclick="setLoginRole('caregiver')" id="tabCaregiverLogin" class="py-2 px-2 text-xs font-semibold rounded-lg transition-all text-gray-600 hover:text-gray-900 text-center">
+               குடும்பம் (Family)
             </button>
           </div>
 
@@ -138,18 +138,18 @@
 
             <!-- Senior Citizen Login Form (Ultra Large Touch Targets) -->
             <div id="seniorLoginFormPanel" class="space-y-4">
-              <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-900">
+              <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 text-xs text-amber-900">
                 <strong>முதியோர் வசதிக்காக:</strong> உங்கள் மொபைல் எண்ணை உள்ளிட்டு நேரடியாக உள்நுழையலாம். அல்லது கீழேயுள்ள <strong>"One-Click Demo Entry"</strong> பொத்தானை அழுத்தவும்.
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Mobile Number (மொபைல் எண்)</label>
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Mobile Number (மொபைல் எண்)</label>
                 <div class="flex">
-                  <span class="inline-flex items-center px-3.5 rounded-l-xl border border-r-0 border-slate-300 bg-slate-50 text-slate-600 font-bold text-sm">+91</span>
-                  <input type="tel" id="seniorMobileInput" value="9840123456" class="w-full text-base font-semibold p-3 border border-slate-300 rounded-r-xl focus:ring-2 focus:ring-amber-400 outline-none">
+                  <span class="inline-flex items-center px-3.5 rounded-l-xl border border-r-0 border-gray-300 bg-white text-gray-600 font-bold text-sm">+91</span>
+                  <input type="tel" id="seniorMobileInput" value="9840123456" class="w-full text-base font-semibold p-3 border border-gray-300 rounded-r-xl focus:ring-2 focus:ring-amber-400 outline-none">
                 </div>
               </div>
               <div>
-                <button onclick="simulateSendOtp()" class="w-full py-3 bg-blue-600 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-sm transition shadow flex items-center justify-center gap-2">
+                <button onclick="simulateSendOtp()" class="w-full py-3 bg-blue-600 hover:bg-amber-400 text-gray-950 font-bold rounded-lg text-sm transition shadow flex items-center justify-center gap-2">
                   <span>📩</span> <span>ஓ.டி.பி அனுப்புக (Send OTP)</span>
                 </button>
               </div>
@@ -158,59 +158,59 @@
             <!-- Volunteer Login Form -->
             <div id="volunteerLoginFormPanel" class="space-y-4 hidden">
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">College / Student Email</label>
-                <input type="email" id="volunteerEmailInput" value="karthik.subramanian@annauniv.edu" class="w-full text-sm font-semibold p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none">
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">College / Student Email</label>
+                <input type="email" id="volunteerEmailInput" value="karthik.subramanian@annauniv.edu" class="w-full text-sm font-semibold p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none">
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">NSS Volunteer / Student ID</label>
-                <input type="text" id="volunteerIdInput" value="NSS-AU-2024-42" class="w-full text-sm font-semibold p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none">
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">NSS Volunteer / Student ID</label>
+                <input type="text" id="volunteerIdInput" value="NSS-AU-2024-42" class="w-full text-sm font-semibold p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none">
               </div>
-              <button onclick="demoLogin('volunteer')" class="w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl text-sm transition shadow flex items-center justify-center gap-2">
-                <span>🎓</span> <span>உள்நுழைக (Login as Volunteer)</span>
+              <button onclick="demoLogin('volunteer')" class="w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg text-sm transition shadow flex items-center justify-center gap-2">
+                <span></span> <span>உள்நுழைக (Login as Volunteer)</span>
               </button>
             </div>
 
             <!-- Caregiver Login Form -->
             <div id="caregiverLoginFormPanel" class="space-y-4 hidden">
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Caregiver Phone / Work Email</label>
-                <input type="text" id="caregiverInput" value="senthil.krishnan@techcorp.com" class="w-full text-sm font-semibold p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-purple-500 outline-none">
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Caregiver Phone / Work Email</label>
+                <input type="text" id="caregiverInput" value="senthil.krishnan@techcorp.com" class="w-full text-sm font-semibold p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none">
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Linked Parent / Senior</label>
-                <input type="text" value="Thiru. Krishnan Ramaswamy (Father - Mylapore, Chennai)" disabled class="w-full text-sm font-semibold p-3 border border-slate-200 bg-slate-50 text-slate-600 rounded-xl">
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Linked Parent / Senior</label>
+                <input type="text" value="Thiru. Krishnan Ramaswamy (Father - Mylapore, Chennai)" disabled class="w-full text-sm font-semibold p-3 border border-gray-200 bg-white text-gray-600 rounded-lg">
               </div>
-              <button onclick="demoLogin('caregiver')" class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl text-sm transition shadow flex items-center justify-center gap-2">
-                <span>🛡️</span> <span>உள்நுழைக (Login as Caregiver)</span>
+              <button onclick="demoLogin('caregiver')" class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-sm transition shadow flex items-center justify-center gap-2">
+                <span></span> <span>உள்நுழைக (Login as Caregiver)</span>
               </button>
             </div>
 
             <!-- Instant One-Click Demo Quick Logins -->
-            <div class="pt-4 border-t border-slate-200">
-              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">நேரடி முன்னோட்டம் (One-Click Demo Entry):</p>
+            <div class="pt-4 border-t border-gray-200">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">நேரடி முன்னோட்டம் (One-Click Demo Entry):</p>
               <div class="space-y-2">
-                <button onclick="demoLogin('senior')" class="w-full py-2.5 px-3 bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold rounded-xl text-xs flex items-center justify-between border border-amber-300 transition">
+                <button onclick="demoLogin('senior')" class="w-full py-2.5 px-3 bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold rounded-lg text-xs flex items-center justify-between border border-amber-300 transition">
                   <span class="flex items-center gap-2">
-                    <span>👴</span>
+                    <span></span>
                     <span>உள்நுழைக: <strong>கிருஷ்ணன் ராமசுவாமி (முதியோர், 76)</strong></span>
                   </span>
-                  <span class="text-[11px] bg-amber-400 px-2 py-0.5 rounded-full font-extrabold">One Click →</span>
+                  <span class="text-[11px] bg-amber-400 px-2 py-0.5 rounded-md font-extrabold">One Click →</span>
                 </button>
 
-                <button onclick="demoLogin('volunteer')" class="w-full py-2.5 px-3 bg-slate-100 hover:bg-indigo-100 text-slate-900 font-bold rounded-xl text-xs flex items-center justify-between border border-slate-300 transition">
+                <button onclick="demoLogin('volunteer')" class="w-full py-2.5 px-3 bg-gray-100 hover:bg-indigo-100 text-gray-900 font-bold rounded-lg text-xs flex items-center justify-between border border-gray-300 transition">
                   <span class="flex items-center gap-2">
-                    <span>🎓</span>
+                    <span></span>
                     <span>உள்நுழைக: <strong>கார்த்திக் சுப்ரமணியன் (NSS Volunteer, 21)</strong></span>
                   </span>
-                  <span class="text-[11px] bg-blue-700 text-white px-2 py-0.5 rounded-full font-bold">One Click →</span>
+                  <span class="text-[11px] bg-blue-700 text-white px-2 py-0.5 rounded-md font-bold">One Click →</span>
                 </button>
 
-                <button onclick="demoLogin('caregiver')" class="w-full py-2.5 px-3 bg-purple-50 hover:bg-purple-100 text-purple-950 font-bold rounded-xl text-xs flex items-center justify-between border border-purple-200 transition">
+                <button onclick="demoLogin('caregiver')" class="w-full py-2.5 px-3 bg-purple-50 hover:bg-purple-100 text-purple-950 font-bold rounded-lg text-xs flex items-center justify-between border border-purple-200 transition">
                   <span class="flex items-center gap-2">
-                    <span>🛡️</span>
+                    <span></span>
                     <span>உள்நுழைக: <strong>செந்தில் கிருஷ்ணன் (மகன், பெங்களூரு)</strong></span>
                   </span>
-                  <span class="text-[11px] bg-purple-600 text-white px-2 py-0.5 rounded-full font-bold">One Click →</span>
+                  <span class="text-[11px] bg-purple-600 text-white px-2 py-0.5 rounded-md font-bold">One Click →</span>
                 </button>
               </div>
             </div>
@@ -219,7 +219,7 @@
         </div>
 
         <!-- Footer terms -->
-        <p class="text-[11px] text-slate-400 text-center mt-6">
+        <p class="text-[11px] text-gray-400 text-center mt-6">
           தமிழ்நாடு சமூக நலம் & தலைமுறைகள் பரிமாற்றக் கொள்கை • அனைத்துத் தகவல்களும் பாதுகாக்கப்பட்டவை.
         </p>
 
@@ -236,35 +236,35 @@
       
       <!-- Brand & Mission -->
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center text-slate-900 font-bold text-xl shadow">
-          🤝
+        <div class="w-10 h-10 rounded-md bg-amber-400 flex items-center justify-center text-gray-900 font-bold text-xl shadow">
+          
         </div>
         <div>
           <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
             Elder Companion
-            <span class="text-xs bg-amber-400 text-slate-950 font-extrabold px-2 py-0.5 rounded-full">முதியோர் தோழன்</span>
+            <span class="text-xs bg-amber-400 text-gray-950 font-extrabold px-2 py-0.5 rounded-md">முதியோர் தோழன்</span>
           </span>
           <p class="text-xs text-indigo-200">தலைமுறை இணைப்பு • கதைப் பெட்டி • டிஜிட்டல் உதவி</p>
         </div>
       </div>
 
       <!-- Quick Role Switcher -->
-      <div class="flex items-center bg-indigo-900/80 p-1.5 rounded-2xl border border-indigo-700/60 shadow-inner">
+      <div class="flex items-center bg-indigo-900/80 p-1.5 rounded-lg border border-indigo-700/60 shadow-inner">
         <span class="text-xs text-indigo-300 font-semibold px-2 uppercase tracking-wider hidden lg:inline">பயனர்:</span>
-        <button id="navBtnSenior" onclick="switchRole('senior')" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-amber-400 text-slate-950 shadow">
-          👴 கிருஷ்ணன் ஐயா (76)
+        <button id="navBtnSenior" onclick="switchRole('senior')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-amber-400 text-gray-950 shadow">
+           கிருஷ்ணன் ஐயா (76)
         </button>
-        <button id="navBtnVolunteer" onclick="switchRole('volunteer')" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800">
-          🎓 கார்த்திக் (21)
+        <button id="navBtnVolunteer" onclick="switchRole('volunteer')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800">
+           கார்த்திக் (21)
         </button>
-        <button id="navBtnCaregiver" onclick="switchRole('caregiver')" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800">
-          🛡️ செந்தில் (மகன்)
+        <button id="navBtnCaregiver" onclick="switchRole('caregiver')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800">
+           செந்தில் (மகன்)
         </button>
       </div>
 
       <!-- Senior Accessibility Toolbar & Sign Out -->
       <div class="flex items-center gap-2">
-        <div class="flex items-center gap-1.5 bg-indigo-900/90 px-2.5 py-1 rounded-xl border border-indigo-700">
+        <div class="flex items-center gap-1.5 bg-indigo-900/90 px-2.5 py-1 rounded-lg border border-indigo-700">
           <button onclick="cycleFontSize()" title="எழுத்து அளவு" class="px-2 py-1 bg-indigo-800 hover:bg-blue-800 rounded text-xs font-bold border border-indigo-600" id="fontSizeIndicator">
             Aa Large
           </button>
@@ -273,7 +273,7 @@
           </button>
         </div>
 
-        <button onclick="signOut()" class="px-3 py-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-xl text-xs font-bold transition flex items-center gap-1">
+        <button onclick="signOut()" class="px-3 py-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-lg text-xs font-bold transition flex items-center gap-1">
           <span>🚪</span> <span class="hidden sm:inline">வெளியேறு (Exit)</span>
         </button>
       </div>
@@ -297,39 +297,39 @@
     <div id="seniorView" class="space-y-6">
 
       <!-- Warm Greeting & Mood Check-In -->
-      <div class="card-theme bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-amber-100 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="card-theme bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-amber-100 flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
           <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&h=160&q=80" 
-               alt="Krishnan Ramaswamy" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-amber-300 shadow">
+               alt="Krishnan Ramaswamy" class="w-20 h-20 sm:w-24 sm:h-24 rounded-md object-cover border-4 border-amber-300 shadow">
           <div>
             <div class="flex items-center gap-2">
-              <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-800" id="seniorGreeting">வணக்கம் கிருஷ்ணன் ஐயா! 🌸</h1>
-              <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded-full font-bold">மயிலாப்பூர், சென்னை</span>
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-800" id="seniorGreeting">வணக்கம் கிருஷ்ணன் ஐயா! </h1>
+              <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded-md font-bold">மயிலாப்பூர், சென்னை</span>
             </div>
-            <p class="text-base text-slate-600 mt-1">
+            <p class="text-base text-gray-600 mt-1">
               ஓய்வுபெற்ற தலைமைப் பொறியாளர் (தென்னக இரயில்வே) • கார்த்திக் மற்றும் 3 மாணவர்கள் பேசத் தயார்.
             </p>
           </div>
         </div>
 
         <!-- Mood Selector with Positive Feedback -->
-        <div class="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 text-center w-full md:w-auto">
+        <div class="bg-amber-50/80 border border-amber-200 rounded-lg p-4 text-center w-full md:w-auto">
           <p class="text-xs font-bold text-amber-950 mb-2 uppercase tracking-wider">இன்று உங்கள் மனம் எவ்வாறு உள்ளது? (How are you feeling?)</p>
           <div class="flex justify-center gap-2.5">
-            <button onclick="setSeniorMood('cheerful')" class="p-2.5 bg-white hover:bg-amber-200 rounded-xl text-2xl transition border border-amber-200 shadow-sm" title="மகிழ்ச்சி (Cheerful)">😊</button>
-            <button onclick="setSeniorMood('calm')" class="p-2.5 bg-white hover:bg-amber-200 rounded-xl text-2xl transition border border-amber-200 shadow-sm" title="அமைதி (Peaceful)">😌</button>
-            <button onclick="setSeniorMood('lonely')" class="p-2.5 bg-white hover:bg-amber-200 rounded-xl text-2xl transition border border-amber-200 shadow-sm" title="பேச விருப்பம் (Company)">☕</button>
-            <button onclick="setSeniorMood('nostalgic')" class="p-2.5 bg-white hover:bg-amber-200 rounded-xl text-2xl transition border border-amber-200 shadow-sm" title="பழைய நினைவுகள் (Storyteller)">📖</button>
+            <button onclick="setSeniorMood('cheerful')" class="p-2.5 bg-white hover:bg-amber-200 rounded-lg text-2xl transition border border-amber-200 shadow-sm" title="மகிழ்ச்சி (Cheerful)">😊</button>
+            <button onclick="setSeniorMood('calm')" class="p-2.5 bg-white hover:bg-amber-200 rounded-lg text-2xl transition border border-amber-200 shadow-sm" title="அமைதி (Peaceful)">😌</button>
+            <button onclick="setSeniorMood('lonely')" class="p-2.5 bg-white hover:bg-amber-200 rounded-lg text-2xl transition border border-amber-200 shadow-sm" title="பேச விருப்பம் (Company)"></button>
+            <button onclick="setSeniorMood('nostalgic')" class="p-2.5 bg-white hover:bg-amber-200 rounded-lg text-2xl transition border border-amber-200 shadow-sm" title="பழைய நினைவுகள் (Storyteller)">📖</button>
           </div>
           <p id="seniorMoodFeedback" class="text-xs text-amber-900 font-semibold mt-2">மனநிலை: மனநிறைவு & பேச விருப்பம் (Peaceful)</p>
         </div>
       </div>
 
       <!-- PRIMARY ACTION: ONE-TAP CONNECT TO COMPANION (LARGE BUTTON) -->
-      <div class="card-theme bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 rounded-xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="card-theme  from-amber-600 via-amber-700 to-amber-800 rounded-lg p-6 sm:p-8 text-white shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="space-y-2 text-center md:text-left">
-          <div class="inline-flex items-center gap-2 bg-blue-600/40 text-amber-100 px-3.5 py-1 rounded-full text-xs font-bold border border-amber-300/30">
-            <span class="w-2.5 h-2.5 bg-amber-300 rounded-full animate-ping"></span>
+          <div class="inline-flex items-center gap-2 bg-blue-600/40 text-amber-100 px-3.5 py-1 rounded-md text-xs font-bold border border-amber-300/30">
+            <span class="w-2.5 h-2.5 bg-amber-300 rounded-md animate-ping"></span>
             இனிய உரையாடல் இணைப்பு (Instant Warm Connect)
           </div>
           <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">இளம் தோழருடன் மனம்விட்டுப் பேச விருப்பமா?</h2>
@@ -338,7 +338,7 @@
           </p>
         </div>
         <button onclick="startCall('கார்த்திக் சுப்ரமணியன் (இளைஞர் தோழர்)', 'தென்னக இரயில்வே & எம்.எஸ்.சுப்புலட்சுமி பாடல்கள்', 'senior')" 
-                class="pulse-call w-full md:w-auto px-8 py-5 bg-white hover:bg-amber-50 text-slate-950 font-black text-xl sm:text-2xl rounded-2xl shadow-2xl flex items-center justify-center gap-3 transition-transform active:scale-95 border-2 border-amber-300">
+                class="pulse-call w-full md:w-auto px-8 py-5 bg-white hover:bg-amber-50 text-gray-950 font-black text-xl sm:text-2xl rounded-lg shadow-md flex items-center justify-center gap-3 transition-transform active:scale-95 border-2 border-amber-300">
           <span class="text-3xl">📞</span>
           <span>உரையாடலைத் தொடங்குக (Call Karthik)</span>
         </button>
@@ -348,86 +348,86 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <!-- Pillar 1: My Companions (என் இளம் தோழர்கள்) -->
-        <div class="card-theme bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:border-amber-400 transition flex flex-col justify-between">
+        <div class="card-theme bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:border-amber-400 transition flex flex-col justify-between">
           <div>
-            <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
+            <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-lg flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
               👥
             </div>
-            <h3 class="text-xl font-bold text-slate-800">என் இளம் தோழர்கள்</h3>
-            <p class="text-slate-600 mt-2 text-xs leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-800">என் இளம் தோழர்கள்</h3>
+            <p class="text-gray-600 mt-2 text-xs leading-relaxed">
               ரயில்வே வரலாறு, கர்நாடக இசை மற்றும் சதுரங்கம் குறித்து உங்களிடம் பாசத்துடன் பேசும் மாணவர்கள்.
             </p>
             <div class="mt-4 flex -space-x-2">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Karthik">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Ashwin">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80" alt="Vignesh">
+              <img class="inline-block h-10 w-10 rounded-md ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Karthik">
+              <img class="inline-block h-10 w-10 rounded-md ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Ashwin">
+              <img class="inline-block h-10 w-10 rounded-md ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80" alt="Vignesh">
             </div>
           </div>
-          <button onclick="startCall('கார்த்திக் சுப்ரமணியன்', 'சென்னை சென்ட்ரல் மின்சார ரயில் நினைவுகள்', 'senior')" class="mt-6 w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl text-sm shadow transition">
+          <button onclick="startCall('கார்த்திக் சுப்ரமணியன்', 'சென்னை சென்ட்ரல் மின்சார ரயில் நினைவுகள்', 'senior')" class="mt-6 w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg text-sm shadow transition">
             கார்த்திக்கை அழைக்க (Call Karthik)
           </button>
         </div>
 
         <!-- Pillar 2: INNOVATION - Kadhai Petti (கதை பெட்டி - Oral History Archiving) -->
-        <div class="card-theme bg-white rounded-xl p-6 shadow-sm border border-amber-300 hover:border-amber-500 transition flex flex-col justify-between relative overflow-hidden">
-          <span class="absolute top-3 right-3 text-[10px] uppercase font-black bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full border border-amber-300">
+        <div class="card-theme bg-white rounded-lg p-6 shadow-sm border border-amber-300 hover:border-amber-500 transition flex flex-col justify-between relative overflow-hidden">
+          <span class="absolute top-3 right-3 text-[10px] uppercase font-black bg-amber-100 text-amber-900 px-2 py-0.5 rounded-md border border-amber-300">
             Innovative
           </span>
           <div>
-            <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-2xl flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
-              🎙️
+            <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-lg flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
+              
             </div>
-            <h3 class="text-xl font-bold text-slate-800">கதை பெட்டி (Kadhai Petti)</h3>
-            <p class="text-slate-600 mt-2 text-xs leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-800">கதை பெட்டி (Kadhai Petti)</h3>
+            <p class="text-gray-600 mt-2 text-xs leading-relaxed">
               உங்கள் வாழ்வியல் அனுபவங்களைப் பேசிப் பதிவு செய்யுங்கள். ஏ.ஐ. இதை தமிழ் & ஆங்கிலத்தில் குடும்பப் பொக்கிஷமாகச் சேமிக்கும்.
             </p>
-            <div class="mt-3 p-2 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900">
+            <div class="mt-3 p-2 bg-amber-50 rounded-lg border border-amber-200 text-xs text-amber-900">
               📜 <strong>சேமிக்கப்பட்ட கதை:</strong> "1983ல் சென்னை சென்ட்ரலில் முதல் எலக்ட்ரிக் ரயில்"
             </div>
           </div>
-          <button onclick="openKadhaiModal()" class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-slate-950 font-bold rounded-xl text-sm shadow transition flex items-center justify-center gap-2">
-            <span>🎙️</span> <span>புதிய கதையைப் பதிவு செய்க</span>
+          <button onclick="openKadhaiModal()" class="mt-6 w-full py-3 bg-blue-600 hover:bg-blue-700 text-gray-950 font-bold rounded-lg text-sm shadow transition flex items-center justify-center gap-2">
+            <span></span> <span>புதிய கதையைப் பதிவு செய்க</span>
           </button>
         </div>
 
         <!-- Pillar 3: INNOVATION - Digital Udhaviyalar (டிஜிட்டல் உதவியாளர் - Micro Tech Tutoring) -->
-        <div class="card-theme bg-white rounded-xl p-6 shadow-sm border border-emerald-300 hover:border-emerald-500 transition flex flex-col justify-between relative overflow-hidden">
-          <span class="absolute top-3 right-3 text-[10px] uppercase font-black bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-full border border-emerald-300">
+        <div class="card-theme bg-white rounded-lg p-6 shadow-sm border border-emerald-300 hover:border-emerald-500 transition flex flex-col justify-between relative overflow-hidden">
+          <span class="absolute top-3 right-3 text-[10px] uppercase font-black bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-md border border-emerald-300">
             Tech Help
           </span>
           <div>
-            <div class="w-14 h-14 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
+            <div class="w-14 h-14 bg-emerald-100 text-emerald-800 rounded-lg flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
               📱
             </div>
-            <h3 class="text-xl font-bold text-slate-800">டிஜிட்டல் உதவியாளர்</h3>
-            <p class="text-slate-600 mt-2 text-xs leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-800">டிஜிட்டல் உதவியாளர்</h3>
+            <p class="text-gray-600 mt-2 text-xs leading-relaxed">
               டி.என்.இ.பி மின் கட்டணம், IRCTC ரயில் டிக்கெட் அல்லது சிங்கப்பூரில் உள்ள பேரனுடன் வாட்ஸ்அப் வீடியோ அழைப்பு கற்க மாணவர் உதவி.
             </p>
-            <div class="mt-3 space-y-1 text-xs text-slate-600">
-              <span class="inline-block bg-slate-100 px-2 py-0.5 rounded font-medium">✓ ரகசிய கடவுச்சொல் இன்றி 100% பாதுகாப்பானது</span>
+            <div class="mt-3 space-y-1 text-xs text-gray-600">
+              <span class="inline-block bg-gray-100 px-2 py-0.5 rounded font-medium">✓ ரகசிய கடவுச்சொல் இன்றி 100% பாதுகாப்பானது</span>
             </div>
           </div>
-          <button onclick="requestTechHelp('TNEB Electricity Bill Online Payment Guidance')" class="mt-6 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-sm shadow transition">
+          <button onclick="requestTechHelp('TNEB Electricity Bill Online Payment Guidance')" class="mt-6 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-sm shadow transition">
             உதவி கோருக (Ask Tech Sathi)
           </button>
         </div>
 
         <!-- Pillar 4: Safety & Parivar Alert (குடும்பப் பாதுகாப்பு) -->
-        <div class="card-theme bg-white rounded-xl p-6 shadow-sm border border-rose-200 hover:border-rose-400 transition flex flex-col justify-between">
+        <div class="card-theme bg-white rounded-lg p-6 shadow-sm border border-rose-200 hover:border-rose-400 transition flex flex-col justify-between">
           <div>
-            <div class="w-14 h-14 bg-rose-100 text-rose-700 rounded-2xl flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
+            <div class="w-14 h-14 bg-rose-100 text-rose-700 rounded-lg flex items-center justify-center text-3xl mb-4 font-bold shadow-sm">
               🆘
             </div>
-            <h3 class="text-xl font-bold text-slate-800">குடும்பத் தொடர்பு</h3>
-            <p class="text-slate-600 mt-2 text-xs leading-relaxed">
+            <h3 class="text-xl font-bold text-gray-800">குடும்பத் தொடர்பு</h3>
+            <p class="text-gray-600 mt-2 text-xs leading-relaxed">
               பெங்களூரில் உள்ள மகன் செந்திலுக்கு ஒரே கிளிக்கில் செய்தி அனுப்பவும் அல்லது உடனடி உதவி பெறவும்.
             </p>
-            <div class="mt-4 p-2 bg-slate-50 rounded-xl text-xs text-slate-600 flex items-center gap-2">
+            <div class="mt-4 p-2 bg-white rounded-lg text-xs text-gray-600 flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
               செந்தில் கிருஷ்ணன் (மகன்) தொடர்பில் உள்ளார்
             </div>
           </div>
-          <button onclick="triggerCaregiverAlert()" class="mt-6 w-full py-3 bg-rose-50 hover:bg-rose-100 text-rose-700 border-2 border-rose-300 font-bold rounded-xl text-sm shadow-sm transition">
+          <button onclick="triggerCaregiverAlert()" class="mt-6 w-full py-3 bg-rose-50 hover:bg-rose-100 text-rose-700 border-2 border-rose-300 font-bold rounded-lg text-sm shadow-sm transition">
             மகன் செந்திலுக்குத் தெரிவிக்க
           </button>
         </div>
@@ -435,19 +435,19 @@
       </div>
 
       <!-- Retro Radio 102.1 MHz & Carnatic Music Lounge -->
-      <div class="card-theme bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-900 rounded-xl p-6 text-white shadow-xl border border-indigo-800/60">
+      <div class="card-theme  from-indigo-950 via-gray-900 to-indigo-900 rounded-lg p-6 text-white shadow-md border border-indigo-800/60">
         <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-amber-400 text-slate-900 flex items-center justify-center text-3xl font-black shadow-lg">
-              📻
+            <div class="w-16 h-16 rounded-lg bg-amber-400 text-gray-900 flex items-center justify-center text-3xl font-black shadow-sm">
+              
             </div>
             <div>
               <div class="flex flex-wrap items-center gap-2">
-                <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-white"></span> LIVE
+                <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-md animate-pulse flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-md bg-white"></span> LIVE
                 </span>
-                <span class="text-blue-300 font-mono text-sm font-black bg-slate-950 px-2.5 py-0.5 rounded-lg border border-amber-400/40">
+                <span class="text-blue-300 font-mono text-sm font-black bg-gray-950 px-2.5 py-0.5 rounded-lg border border-amber-400/40">
                   102.1 MHz
                 </span>
                 <span class="text-xs text-indigo-200 font-semibold">AIR FM Rainbow (திருச்சி & சென்னை வானொலி)</span>
@@ -463,27 +463,27 @@
           <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto justify-end">
             
             <!-- Frequency presets -->
-            <div class="flex bg-slate-950/80 p-1 rounded-xl border border-slate-700 text-xs">
-              <button onclick="setRadioFreq('102.1', 'AIR Rainbow (சென்னை & திருச்சி)')" id="freq102Btn" class="px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-slate-950 shadow">
+            <div class="flex bg-gray-950/80 p-1 rounded-lg border border-gray-700 text-xs">
+              <button onclick="setRadioFreq('102.1', 'AIR Rainbow (சென்னை & திருச்சி)')" id="freq102Btn" class="px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-gray-950 shadow">
                 102.1 MHz
               </button>
-              <button onclick="setRadioFreq('100.5', 'AIR Gold (பழைய நினைவுகள்)')" id="freq100Btn" class="px-2.5 py-1 rounded-lg font-semibold text-slate-300 hover:text-white">
+              <button onclick="setRadioFreq('100.5', 'AIR Gold (பழைய நினைவுகள்)')" id="freq100Btn" class="px-2.5 py-1 rounded-lg font-semibold text-gray-300 hover:text-white">
                 100.5 MHz
               </button>
-              <button onclick="setRadioFreq('105.0', 'மார்கழி கர்நாடக சங்கீதம்')" id="freq105Btn" class="px-2.5 py-1 rounded-lg font-semibold text-slate-300 hover:text-white">
+              <button onclick="setRadioFreq('105.0', 'மார்கழி கர்நாடக சங்கீதம்')" id="freq105Btn" class="px-2.5 py-1 rounded-lg font-semibold text-gray-300 hover:text-white">
                 105.0 MHz
               </button>
             </div>
 
             <!-- Volume Slider -->
-            <div class="flex items-center gap-1.5 bg-slate-950/80 px-2.5 py-1.5 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <div class="flex items-center gap-1.5 bg-gray-950/80 px-2.5 py-1.5 rounded-lg border border-gray-700 text-xs text-gray-300">
               <span id="volumeIcon" class="text-sm">🔊</span>
               <input type="range" id="radioVolumeSlider" min="0" max="1" step="0.05" value="0.9" oninput="setRadioVolume(this.value)" class="w-16 accent-amber-400 cursor-pointer" title="ஒலி அளவு (Volume)">
               <span id="volumePercent" class="font-mono text-[11px] text-blue-300 font-bold">90%</span>
             </div>
 
             <!-- Equalizer visualizer bars -->
-            <div class="flex items-end gap-1 bg-slate-950 px-3 py-2 rounded-xl border border-slate-800 h-9" id="radioEqBars">
+            <div class="flex items-end gap-1 bg-gray-950 px-3 py-2 rounded-lg border border-gray-800 h-9" id="radioEqBars">
               <div class="w-1.5 h-2 bg-amber-400 rounded-sm transition-all duration-100"></div>
               <div class="w-1.5 h-3 bg-amber-400 rounded-sm transition-all duration-100"></div>
               <div class="w-1.5 h-1.5 bg-amber-400 rounded-sm transition-all duration-100"></div>
@@ -491,7 +491,7 @@
             </div>
 
             <!-- Big Play / Stop Button -->
-            <button onclick="toggleRadioPlay()" id="retroRadioBtn" class="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm rounded-xl shadow-lg transition flex items-center gap-2">
+            <button onclick="toggleRadioPlay()" id="retroRadioBtn" class="px-5 py-3 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black text-sm rounded-lg shadow-sm transition flex items-center gap-2">
               <span id="radioPlayIcon">▶️</span>
               <span id="radioPlayText">102.1 FM ஒலிக்க (Play)</span>
             </button>
@@ -511,38 +511,38 @@
     <div id="volunteerView" class="space-y-6 hidden">
 
       <!-- Student Banner with NSS Verified Hours & Academic Credit -->
-      <div class="card-theme bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div class="card-theme bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-200 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=80" 
-                 alt="Karthik Subramanian" class="w-20 h-20 rounded-full object-cover border-4 border-slate-300 shadow">
-            <span class="absolute bottom-0 right-0 bg-blue-600 text-white p-1 rounded-full text-xs shadow" title="NSS Verified Volunteer">
+                 alt="Karthik Subramanian" class="w-20 h-20 rounded-md object-cover border-4 border-gray-300 shadow">
+            <span class="absolute bottom-0 right-0 bg-blue-600 text-white p-1 rounded-md text-xs shadow" title="NSS Verified Volunteer">
               ✓
             </span>
           </div>
           <div>
             <div class="flex flex-wrap items-center gap-2">
-              <h1 class="text-2xl font-bold text-slate-900">Karthik Subramanian</h1>
-              <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-slate-300">
+              <h1 class="text-2xl font-bold text-gray-900">Karthik Subramanian</h1>
+              <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-md border border-gray-300">
                 Anna University (CEG) • B.Tech Computer Science
               </span>
-              <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-amber-200">
+              <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-md border border-amber-200">
                 NSS Youth Fellow (National Service Scheme)
               </span>
             </div>
-            <p class="text-xs text-slate-600 mt-1">
-              Volunteer Roll No: <code class="bg-slate-100 px-1 py-0.5 rounded font-mono">NSS-AU-2024-42</code> • Focus: Oral History Archiving & Digital Literacy
+            <p class="text-xs text-gray-600 mt-1">
+              Volunteer Roll No: <code class="bg-gray-100 px-1 py-0.5 rounded font-mono">NSS-AU-2024-42</code> • Focus: Oral History Archiving & Digital Literacy
             </p>
           </div>
         </div>
 
         <!-- Verified Hours & Official Certificate -->
         <div class="flex flex-wrap items-center gap-4">
-          <div class="bg-slate-100 border border-slate-200 rounded-2xl px-5 py-3 text-center">
+          <div class="bg-gray-100 border border-gray-200 rounded-lg px-5 py-3 text-center">
             <span class="block text-2xl font-black text-indigo-700" id="volunteerHoursCounter">22.5 மணிநேரம்</span>
             <span class="text-xs font-semibold text-blue-700">NSS Certified Hours</span>
           </div>
-          <button onclick="openCertificateModal()" class="px-5 py-3.5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-2xl text-xs shadow-md transition flex items-center gap-2">
+          <button onclick="openCertificateModal()" class="px-5 py-3.5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg text-xs shadow-md transition flex items-center gap-2">
             <span>📜</span>
             <span>View National Service Certificate</span>
           </button>
@@ -551,23 +551,23 @@
 
       <!-- Quick Metrics Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <p class="text-xs text-slate-500 font-medium">Recorded Kadhai Stories</p>
-          <p class="text-2xl font-bold text-slate-800 mt-1">6 கதைகள்</p>
-          <span class="text-xs text-slate-700 font-medium">Family Heritage Preserved</span>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+          <p class="text-xs text-gray-500 font-medium">Recorded Kadhai Stories</p>
+          <p class="text-2xl font-bold text-gray-800 mt-1">6 கதைகள்</p>
+          <span class="text-xs text-gray-700 font-medium">Family Heritage Preserved</span>
         </div>
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <p class="text-xs text-slate-500 font-medium">Regular Senior Elders</p>
-          <p class="text-2xl font-bold text-slate-800 mt-1">3 Elders</p>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+          <p class="text-xs text-gray-500 font-medium">Regular Senior Elders</p>
+          <p class="text-2xl font-bold text-gray-800 mt-1">3 Elders</p>
           <span class="text-xs text-blue-700 font-medium">Deep Cultural Bond</span>
         </div>
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <p class="text-xs text-slate-500 font-medium">ScamGuard Safety Score</p>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+          <p class="text-xs text-gray-500 font-medium">ScamGuard Safety Score</p>
           <p class="text-2xl font-bold text-emerald-600 mt-1">100% Safe</p>
-          <span class="text-xs text-slate-500 font-medium">Zero Fraud Risk</span>
+          <span class="text-xs text-gray-500 font-medium">Zero Fraud Risk</span>
         </div>
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <p class="text-xs text-slate-500 font-medium">Next Milestone</p>
+        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+          <p class="text-xs text-gray-500 font-medium">Next Milestone</p>
           <p class="text-2xl font-bold text-purple-600 mt-1">25 மணிநேரம்</p>
           <span class="text-xs text-purple-600 font-medium">Dean's Social Leadership Award</span>
         </div>
@@ -579,45 +579,45 @@
         <!-- Senior Matching Feed -->
         <div class="lg:col-span-2 space-y-6">
 
-          <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <div class="flex items-center justify-between pb-4 border-b border-gray-100">
               <div>
-                <h2 class="text-lg font-bold text-slate-800">Elders Seeking Companionship & Stories</h2>
-                <p class="text-xs text-slate-500">Smart-matched based on Tamil language fluency & shared heritage interests</p>
+                <h2 class="text-lg font-bold text-gray-800">Elders Seeking Companionship & Stories</h2>
+                <p class="text-xs text-gray-500">Smart-matched based on Tamil language fluency & shared heritage interests</p>
               </div>
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
-                <span class="w-2 h-2 mr-1 rounded-full bg-emerald-500 animate-pulse"></span> 4 Online
+              <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800">
+                <span class="w-2 h-2 mr-1 rounded-md bg-emerald-500 animate-pulse"></span> 4 Online
               </span>
             </div>
 
             <!-- List of Seniors -->
-            <div class="divide-y divide-slate-100 mt-4">
+            <div class="divide-y divide-gray-100 mt-4">
 
               <!-- Elder 1: Krishnan Ramaswamy -->
               <div class="py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div class="flex items-start space-x-4">
                   <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" 
-                       alt="Krishnan Ramaswamy" class="w-14 h-14 rounded-full object-cover border-2 border-amber-300">
+                       alt="Krishnan Ramaswamy" class="w-14 h-14 rounded-md object-cover border-2 border-amber-300">
                   <div>
                     <div class="flex items-center gap-2">
-                      <h3 class="font-bold text-slate-900 text-base">Thiru. Krishnan Ramaswamy, 76</h3>
-                      <span class="bg-amber-100 text-amber-900 text-xs px-2 py-0.5 rounded-full font-bold">98% Match</span>
+                      <h3 class="font-bold text-gray-900 text-base">Thiru. Krishnan Ramaswamy, 76</h3>
+                      <span class="bg-amber-100 text-amber-900 text-xs px-2 py-0.5 rounded-md font-bold">98% Match</span>
                     </div>
-                    <p class="text-xs text-slate-500 mt-0.5">Mylapore, Chennai • Retd. Chief Mechanical Engineer, Southern Railway</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Mylapore, Chennai • Retd. Chief Mechanical Engineer, Southern Railway</p>
                     <div class="flex flex-wrap gap-1.5 mt-2">
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">🚂 Southern Railway History</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">🎶 Carnatic Kutcheris</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">♟️ Chess</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium"> Southern Railway History</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium"> Carnatic Kutcheris</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">♟️ Chess</span>
                     </div>
                   </div>
                 </div>
                 <div class="flex sm:flex-col gap-2 w-full sm:w-auto">
                   <button onclick="startCall('Thiru. Krishnan Ramaswamy', 'Southern Railway & Carnatic Music', 'volunteer')" 
-                          class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
+                          class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
                     <span>📞</span> <span>Connect Now</span>
                   </button>
-                  <button onclick="previewIcebreakers('Thiru. Krishnan Ramaswamy')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl text-xs transition text-center">
-                    💡 View Icebreakers
+                  <button onclick="previewIcebreakers('Thiru. Krishnan Ramaswamy')" class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg text-xs transition text-center">
+                     View Icebreakers
                   </button>
                 </div>
               </div>
@@ -626,27 +626,27 @@
               <div class="py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div class="flex items-start space-x-4">
                   <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&h=120&q=80" 
-                       alt="Gopalakrishnan Iyer" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-300">
+                       alt="Gopalakrishnan Iyer" class="w-14 h-14 rounded-md object-cover border-2 border-indigo-300">
                   <div>
                     <div class="flex items-center gap-2">
-                      <h3 class="font-bold text-slate-900 text-base">Prof. Gopalakrishnan Iyer, 78</h3>
-                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full font-bold">95% Match</span>
+                      <h3 class="font-bold text-gray-900 text-base">Prof. Gopalakrishnan Iyer, 78</h3>
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-md font-bold">95% Match</span>
                     </div>
-                    <p class="text-xs text-slate-500 mt-0.5">Srirangam, Tiruchirappalli • Retd. Dean of Mathematics</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Srirangam, Tiruchirappalli • Retd. Dean of Mathematics</p>
                     <div class="flex flex-wrap gap-1.5 mt-2">
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">📜 Thirukkural Wisdom</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">🛕 Temple Architecture</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">📐 Vedic Mathematics</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">📜 Thirukkural Wisdom</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">🛕 Temple Architecture</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">📐 Vedic Mathematics</span>
                     </div>
                   </div>
                 </div>
                 <div class="flex sm:flex-col gap-2 w-full sm:w-auto">
                   <button onclick="startCall('Prof. Gopalakrishnan Iyer', 'Thirukkural Insights & Srirangam Temple History', 'volunteer')" 
-                          class="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
+                          class="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
                     <span>📞</span> <span>Connect Now</span>
                   </button>
-                  <button onclick="previewIcebreakers('Prof. Gopalakrishnan Iyer')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl text-xs transition text-center">
-                    💡 View Icebreakers
+                  <button onclick="previewIcebreakers('Prof. Gopalakrishnan Iyer')" class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg text-xs transition text-center">
+                     View Icebreakers
                   </button>
                 </div>
               </div>
@@ -655,27 +655,27 @@
               <div class="py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div class="flex items-start space-x-4">
                   <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80" 
-                       alt="Jayaraman" class="w-14 h-14 rounded-full object-cover border-2 border-purple-300">
+                       alt="Jayaraman" class="w-14 h-14 rounded-md object-cover border-2 border-purple-300">
                   <div>
                     <div class="flex items-center gap-2">
-                      <h3 class="font-bold text-slate-900 text-base">Captain K. Jayaraman (Retd.), 75</h3>
-                      <span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded-full font-bold">91% Match</span>
+                      <h3 class="font-bold text-gray-900 text-base">Captain K. Jayaraman (Retd.), 75</h3>
+                      <span class="bg-purple-100 text-purple-800 text-xs px-2 py-0.5 rounded-md font-bold">91% Match</span>
                     </div>
-                    <p class="text-xs text-slate-500 mt-0.5">KK Nagar, Madurai • Veteran & Agriculturalist</p>
+                    <p class="text-xs text-gray-500 mt-0.5">KK Nagar, Madurai • Veteran & Agriculturalist</p>
                     <div class="flex flex-wrap gap-1.5 mt-2">
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">⚔️ Army Memories</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">🌹 Rose Gardening</span>
-                      <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-medium">⚡ TNEB Bill Micro-Help</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">⚔️ Army Memories</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">🌹 Rose Gardening</span>
+                      <span class="bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded font-medium">⚡ TNEB Bill Micro-Help</span>
                     </div>
                   </div>
                 </div>
                 <div class="flex sm:flex-col gap-2 w-full sm:w-auto">
                   <button onclick="startCall('Captain K. Jayaraman (Retd.)', 'Army Life & TNEB Online Payment Micro-Tutoring', 'volunteer')" 
-                          class="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
+                          class="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg text-xs shadow transition flex items-center justify-center gap-1.5 w-full sm:w-auto">
                     <span>📞</span> <span>Connect Now</span>
                   </button>
-                  <button onclick="previewIcebreakers('Captain K. Jayaraman (Retd.)')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl text-xs transition text-center">
-                    💡 View Icebreakers
+                  <button onclick="previewIcebreakers('Captain K. Jayaraman (Retd.)')" class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg text-xs transition text-center">
+                     View Icebreakers
                   </button>
                 </div>
               </div>
@@ -685,13 +685,13 @@
           </div>
 
           <!-- Manual NSS Hour Log Form -->
-          <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-            <h3 class="font-bold text-slate-800 text-sm mb-1">NSS Offline Session Verification & Log</h3>
-            <p class="text-xs text-slate-500 mb-4">Completed an unlogged audio or tech help call? Submit for coordinator sign-off.</p>
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <h3 class="font-bold text-gray-800 text-sm mb-1">NSS Offline Session Verification & Log</h3>
+            <p class="text-xs text-gray-500 mb-4">Completed an unlogged audio or tech help call? Submit for coordinator sign-off.</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <input type="text" id="logSeniorName" placeholder="முதியோர் பெயர் (e.g. Krishnan Ayya)" class="text-xs p-3 border border-slate-300 rounded-xl">
-              <input type="number" id="logDuration" placeholder="நேரம் (நிமிடங்கள் / Mins)" class="text-xs p-3 border border-slate-300 rounded-xl">
-              <button onclick="logCustomHours()" class="bg-indigo-900 hover:bg-indigo-950 text-white text-xs font-bold rounded-xl px-4 py-3 transition">
+              <input type="text" id="logSeniorName" placeholder="முதியோர் பெயர் (e.g. Krishnan Ayya)" class="text-xs p-3 border border-gray-300 rounded-lg">
+              <input type="number" id="logDuration" placeholder="நேரம் (நிமிடங்கள் / Mins)" class="text-xs p-3 border border-gray-300 rounded-lg">
+              <button onclick="logCustomHours()" class="bg-indigo-900 hover:bg-indigo-950 text-white text-xs font-bold rounded-lg px-4 py-3 transition">
                 + Submit for NSS Credit
               </button>
             </div>
@@ -703,40 +703,40 @@
         <div class="space-y-6">
 
           <!-- AI Cultural Icebreaker Card -->
-          <div class="bg-gradient-to-br from-amber-50 to-indigo-50 rounded-xl p-6 border border-amber-200 shadow-sm" id="icebreakerCard">
-            <div class="flex items-center gap-2 text-slate-900 font-bold mb-3">
+          <div class=" from-amber-50 to-indigo-50 rounded-lg p-6 border border-amber-200 shadow-sm" id="icebreakerCard">
+            <div class="flex items-center gap-2 text-gray-900 font-bold mb-3">
               <span class="text-xl">🤖</span>
               <span>AI Cultural Conversation Coach</span>
             </div>
-            <p class="text-xs text-slate-600 mb-4">
+            <p class="text-xs text-gray-600 mb-4">
               Contextual suggestions for talking with <strong id="icebreakerSeniorTarget">Thiru. Krishnan Ramaswamy</strong>:
             </p>
 
-            <div class="space-y-2.5 text-xs text-slate-700" id="icebreakerList">
-              <div class="p-3 bg-white rounded-2xl border border-amber-100 shadow-sm">
-                💡 <strong>Southern Railway Nostalgia:</strong> "Ask Krishnan Ayya how trains operated in Tamil Nadu before computerized reservation in the 1980s."
+            <div class="space-y-2.5 text-xs text-gray-700" id="icebreakerList">
+              <div class="p-3 bg-white rounded-lg border border-amber-100 shadow-sm">
+                 <strong>Southern Railway Nostalgia:</strong> "Ask Krishnan Ayya how trains operated in Tamil Nadu before computerized reservation in the 1980s."
               </div>
-              <div class="p-3 bg-white rounded-2xl border border-amber-100 shadow-sm">
-                💡 <strong>Margazhi Music Season:</strong> "Ask which Carnatic concert at Mylapore Music Academy or Rasika Ranga Sabha was his all-time favorite."
+              <div class="p-3 bg-white rounded-lg border border-amber-100 shadow-sm">
+                 <strong>Margazhi Music Season:</strong> "Ask which Carnatic concert at Mylapore Music Academy or Rasika Ranga Sabha was his all-time favorite."
               </div>
-              <div class="p-3 bg-white rounded-2xl border border-amber-100 shadow-sm">
-                💡 <strong>Filter Coffee & Old Madras:</strong> "Ask how Kapaleeshwarar temple car festival in Mylapore felt during his young engineering days."
+              <div class="p-3 bg-white rounded-lg border border-amber-100 shadow-sm">
+                 <strong>Filter Coffee & Old Madras:</strong> "Ask how Kapaleeshwarar temple car festival in Mylapore felt during his young engineering days."
               </div>
             </div>
 
             <!-- Listener Courtesy Note -->
-            <div class="mt-4 p-3 bg-amber-100/80 border border-amber-200 rounded-2xl text-xs text-amber-950">
-              ⚠️ <strong>Courtesy Note:</strong> Krishnan Ayya prefers being addressed respectfully as <em>'Krishnan Ayya'</em> or <em>'Periyavar'</em>. Speak clearly and comfortably.
+            <div class="mt-4 p-3 bg-amber-100/80 border border-amber-200 rounded-lg text-xs text-amber-950">
+               <strong>Courtesy Note:</strong> Krishnan Ayya prefers being addressed respectfully as <em>'Krishnan Ayya'</em> or <em>'Periyavar'</em>. Speak clearly and comfortably.
             </div>
           </div>
 
           <!-- ScamGuard India Safety Framework -->
-          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
-            <h3 class="text-xs font-bold text-slate-800 flex items-center gap-2 mb-3 uppercase tracking-wider">
-              <span>🛡️</span>
+          <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <h3 class="text-xs font-bold text-gray-800 flex items-center gap-2 mb-3 uppercase tracking-wider">
+              <span></span>
               <span>ScamGuard India Anti-Fraud Shield</span>
             </h3>
-            <ul class="text-xs text-slate-600 space-y-2">
+            <ul class="text-xs text-gray-600 space-y-2">
               <li class="flex items-start gap-2">
                 <span class="text-emerald-500 font-bold">✓</span>
                 <span>Never ask for or mention UPI PIN, OTP, or net banking passwords.</span>
@@ -764,24 +764,24 @@
     <div id="caregiverView" class="space-y-6 hidden">
 
       <!-- Caregiver Banner -->
-      <div class="card-theme bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="card-theme bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div class="flex items-center space-x-4">
-          <div class="w-16 h-16 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-3xl font-bold">
-            🛡️
+          <div class="w-16 h-16 rounded-md bg-purple-100 text-purple-700 flex items-center justify-center text-3xl font-bold">
+            
           </div>
           <div>
-            <h1 class="text-2xl font-bold text-slate-900">செந்தில் கிருஷ்ணன் (குடும்பப் பகுதி)</h1>
-            <p class="text-xs text-slate-600 mt-0.5">தந்தை: <strong>கிருஷ்ணன் ராமசுவாமி (76, சென்னை)</strong> • பெங்களூருவில் பணிபுரியும் மகன் • மன அமைதி</p>
+            <h1 class="text-2xl font-bold text-gray-900">செந்தில் கிருஷ்ணன் (குடும்பப் பகுதி)</h1>
+            <p class="text-xs text-gray-600 mt-0.5">தந்தை: <strong>கிருஷ்ணன் ராமசுவாமி (76, சென்னை)</strong> • பெங்களூருவில் பணிபுரியும் மகன் • மன அமைதி</p>
           </div>
         </div>
 
         <div class="flex gap-2">
           <button onclick="alert('Notification active: WhatsApp and SMS summary sent after every volunteer chat.')" 
-                  class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-xl text-xs font-bold transition">
+                  class="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg text-xs font-bold transition">
             ⚙️ எச்சரிக்கை அமைப்புகள்
           </button>
           <button onclick="startCall('அப்பா (கிருஷ்ணன் ராமசுவாமி)', 'தந்தை-மகன் தினசரி நலம்விசாரிப்பு', 'caregiver')" 
-                  class="px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold shadow transition">
+                  class="px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-xs font-bold shadow transition">
             📞 அப்பாவை நேரடியாக அழைக்க
           </button>
         </div>
@@ -790,63 +790,63 @@
       <!-- Weekly Happiness & Social Engagement Metrics -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-bold text-slate-500 uppercase">அப்பாவின் வாராந்திர சமூக நேரம்</span>
-            <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">+52% வளர்ச்சி</span>
+            <span class="text-xs font-bold text-gray-500 uppercase">அப்பாவின் வாராந்திர சமூக நேரம்</span>
+            <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-bold">+52% வளர்ச்சி</span>
           </div>
-          <p class="text-3xl font-black text-slate-900 mt-2">4.5 மணிநேரம்</p>
-          <p class="text-xs text-slate-500 mt-1">கார்த்திக் மற்றும் அஸ்வினுடன் 7 இனிய உரையாடல்கள்</p>
-          <div class="w-full bg-slate-100 rounded-full h-2.5 mt-4 overflow-hidden">
-            <div class="bg-emerald-500 h-2.5 rounded-full" style="width: 88%"></div>
+          <p class="text-3xl font-black text-gray-900 mt-2">4.5 மணிநேரம்</p>
+          <p class="text-xs text-gray-500 mt-1">கார்த்திக் மற்றும் அஸ்வினுடன் 7 இனிய உரையாடல்கள்</p>
+          <div class="w-full bg-gray-100 rounded-md h-2.5 mt-4 overflow-hidden">
+            <div class="bg-emerald-500 h-2.5 rounded-md" style="width: 88%"></div>
           </div>
-          <span class="text-[11px] text-slate-400 mt-1 block">முதியோர் மனநல இலக்கு: 4.0 மணிநேரம்/வாரம்</span>
+          <span class="text-[11px] text-gray-400 mt-1 block">முதியோர் மனநல இலக்கு: 4.0 மணிநேரம்/வாரம்</span>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-bold text-slate-500 uppercase">அப்பாவின் சராசரி மனநிலை</span>
-            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">😊 உற்சாகம்</span>
+            <span class="text-xs font-bold text-gray-500 uppercase">அப்பாவின் சராசரி மனநிலை</span>
+            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md font-bold">😊 உற்சாகம்</span>
           </div>
-          <p class="text-3xl font-black text-slate-700 mt-2">4.9 / 5.0</p>
-          <p class="text-xs text-slate-500 mt-1">பேசிய பின் அப்பா மிகவும் புத்துணர்ச்சியோடு உணர்வதாகப் பதிவு</p>
-          <div class="w-full bg-slate-100 rounded-full h-2.5 mt-4 overflow-hidden">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 98%"></div>
+          <p class="text-3xl font-black text-gray-700 mt-2">4.9 / 5.0</p>
+          <p class="text-xs text-gray-500 mt-1">பேசிய பின் அப்பா மிகவும் புத்துணர்ச்சியோடு உணர்வதாகப் பதிவு</p>
+          <div class="w-full bg-gray-100 rounded-md h-2.5 mt-4 overflow-hidden">
+            <div class="bg-amber-400 h-2.5 rounded-md" style="width: 98%"></div>
           </div>
-          <span class="text-[11px] text-slate-400 mt-1 block">தனிமை உணர்வு முற்றிலுமாக நீங்கியுள்ளது</span>
+          <span class="text-[11px] text-gray-400 mt-1 block">தனிமை உணர்வு முற்றிலுமாக நீங்கியுள்ளது</span>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-bold text-slate-500 uppercase">கதை பெட்டி ஆவணங்கள்</span>
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-bold">பொக்கிஷம்</span>
+            <span class="text-xs font-bold text-gray-500 uppercase">கதை பெட்டி ஆவணங்கள்</span>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md font-bold">பொக்கிஷம்</span>
           </div>
           <p class="text-3xl font-black text-blue-700 mt-2">2 கதைகள்</p>
-          <p class="text-xs text-slate-500 mt-1">குடும்பப் பெட்டகத்தில் பாதுகாக்கப்பட்ட குரல் நினைவுகள்</p>
-          <div class="w-full bg-slate-100 rounded-full h-2.5 mt-4 overflow-hidden">
-            <div class="bg-blue-700 h-2.5 rounded-full" style="width: 65%"></div>
+          <p class="text-xs text-gray-500 mt-1">குடும்பப் பெட்டகத்தில் பாதுகாக்கப்பட்ட குரல் நினைவுகள்</p>
+          <div class="w-full bg-gray-100 rounded-md h-2.5 mt-4 overflow-hidden">
+            <div class="bg-blue-700 h-2.5 rounded-md" style="width: 65%"></div>
           </div>
-          <span class="text-[11px] text-slate-400 mt-1 block">குரல் பதிவு + தமிழ் எழுத்து வடிவம் சேமிப்பு</span>
+          <span class="text-[11px] text-gray-400 mt-1 block">குரல் பதிவு + தமிழ் எழுத்து வடிவம் சேமிப்பு</span>
         </div>
 
       </div>
 
       <!-- Recent Summaries with Heartwarming Excerpts -->
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-        <h2 class="text-base font-bold text-slate-800 mb-1">அண்மைய உரையாடல்களின் சுருக்கம் (Recent Recaps)</h2>
-        <p class="text-xs text-slate-500 mb-4">அப்பாவின் மகிழ்ச்சியான தருணங்களை நீங்கள் அறிந்துகொள்ள உதவும் சுருக்கக் குறிப்பு.</p>
+      <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <h2 class="text-base font-bold text-gray-800 mb-1">அண்மைய உரையாடல்களின் சுருக்கம் (Recent Recaps)</h2>
+        <p class="text-xs text-gray-500 mb-4">அப்பாவின் மகிழ்ச்சியான தருணங்களை நீங்கள் அறிந்துகொள்ள உதவும் சுருக்கக் குறிப்பு.</p>
 
         <div class="space-y-4">
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+          <div class="p-4 bg-white rounded-lg border border-gray-200">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <div class="flex items-center gap-2">
-                <span class="text-sm font-bold text-slate-900">கார்த்திக் சுப்ரமணியனுடன் உரையாடல் (Volunteer)</span>
+                <span class="text-sm font-bold text-gray-900">கார்த்திக் சுப்ரமணியனுடன் உரையாடல் (Volunteer)</span>
                 <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded font-medium">38 நிமிடங்கள்</span>
               </div>
-              <span class="text-xs text-slate-500">நேற்று மாலை 4:30 மணி</span>
+              <span class="text-xs text-gray-500">நேற்று மாலை 4:30 மணி</span>
             </div>
-            <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+            <p class="text-xs text-gray-700 mt-2 leading-relaxed">
               <strong>நெகிழ்ச்சியான தருணங்கள்:</strong> 1983ல் சென்னை சென்ட்ரலில் முதல் எலக்ட்ரிக் என்ஜின் அறிமுகமானபோது தங்களின் இரயில்வே குழுவினர் ஆற்றிய பணியை அப்பா உற்சாகமாகப் பகிர்ந்தார். கார்த்திக் மிகுந்த மரியாதையுடன் கேட்டறிந்தான். அப்பா சிரித்துக்கொண்டே சொன்னார்: <em>"என் கல்லூரித் தோழர்களிடம் பேசியது போல இருந்தது!"</em>
             </p>
             <div class="mt-2 flex items-center gap-2 text-xs text-emerald-700 font-semibold">
@@ -854,15 +854,15 @@
             </div>
           </div>
 
-          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+          <div class="p-4 bg-white rounded-lg border border-gray-200">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <div class="flex items-center gap-2">
-                <span class="text-sm font-bold text-slate-900">டிஜிட்டல் உதவியாளர் அமர்வு - அஸ்வின் சுந்தரம் (Volunteer)</span>
+                <span class="text-sm font-bold text-gray-900">டிஜிட்டல் உதவியாளர் அமர்வு - அஸ்வின் சுந்தரம் (Volunteer)</span>
                 <span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-0.5 rounded font-medium">20 நிமிடங்கள்</span>
               </div>
-              <span class="text-xs text-slate-500">3 நாட்களுக்கு முன்பு</span>
+              <span class="text-xs text-gray-500">3 நாட்களுக்கு முன்பு</span>
             </div>
-            <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+            <p class="text-xs text-gray-700 mt-2 leading-relaxed">
               <strong>தொழில்நுட்ப உதவி சுருக்கம்:</strong> வாட்ஸ்அப்பில் பேரன் அனுப்பிய புகைப்படங்களை பெரிதாக்கிப் பார்ப்பது எப்படி என்று அஸ்வின் பொறுமையாகச் சொல்லிக்கொடுத்தான். வங்கி ரகசிய விவரங்கள் எதுவும் கேட்கப்படவில்லை.
             </p>
             <div class="mt-2 flex items-center gap-2 text-xs text-emerald-700 font-semibold">
@@ -881,34 +881,34 @@
   <!-- ========================================================================= -->
   <!-- 4. INTERACTIVE SIMULATED CALL ROOM MODAL (TAMIL & ENGLISH SUBTITLES)      -->
   <!-- ========================================================================= -->
-  <div id="callModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden">
-    <div class="bg-slate-900 text-white rounded-xl w-full max-w-4xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col max-h-[92vh]">
+  <div id="callModal" class="fixed inset-0 bg-gray-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden">
+    <div class="bg-gray-900 text-white rounded-lg w-full max-w-4xl overflow-hidden shadow-md border border-gray-800 flex flex-col max-h-[92vh]">
 
       <!-- Call Room Header -->
-      <div class="bg-slate-950 px-6 py-4 flex items-center justify-between border-b border-slate-800">
+      <div class="bg-gray-950 px-6 py-4 flex items-center justify-between border-b border-gray-800">
         <div class="flex items-center gap-3">
           <div class="w-3 h-3 rounded-full bg-red-500 animate-ping"></div>
           <div>
             <span class="text-base font-bold flex items-center gap-2">
               <span id="callPartnerName">கார்த்திக் சுப்ரமணியன்</span>
-              <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">நேரலை இணைப்பு</span>
+              <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-md border border-emerald-500/30">நேரலை இணைப்பு</span>
             </span>
             <span class="text-xs text-blue-200" id="callTopicBadge">தலைப்பு: தென்னக இரயில்வே & கர்நாடக சங்கீதம்</span>
           </div>
         </div>
 
         <div class="flex items-center gap-3">
-          <div class="text-blue-300 font-mono text-sm font-bold bg-slate-800 px-3 py-1 rounded-lg" id="callTimer">
+          <div class="text-blue-300 font-mono text-sm font-bold bg-gray-800 px-3 py-1 rounded-lg" id="callTimer">
             03:45
           </div>
-          <button onclick="toggleCaptions()" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 text-slate-300 font-semibold">
+          <button onclick="toggleCaptions()" class="text-xs bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-lg border border-gray-700 text-gray-300 font-semibold">
             <span id="captionBtnText">துணை தலைப்புகள்: ON</span>
           </button>
         </div>
       </div>
 
       <!-- Video Feed Grid (Senior Krishnan Ayya & Volunteer Karthik) -->
-      <div class="w-full flex-grow relative bg-slate-900 min-h-[50vh] flex flex-col" id="jitsiMeetContainer">
+      <div class="w-full flex-grow relative bg-gray-900 min-h-[50vh] flex flex-col" id="jitsiMeetContainer">
         <!-- Jitsi Iframe will be injected here automatically by the Javascript -->
       </div>
       
@@ -919,7 +919,7 @@
         <div id="reactionsOverlay" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
 
         <!-- LIVE STREAMING SUBTITLES BANNER -->
-        <div id="subtitlesBox" class="absolute bottom-4 left-6 right-6 bg-slate-950/90 border border-slate-700 rounded-2xl p-4 shadow-2xl backdrop-blur">
+        <div id="subtitlesBox" class="absolute bottom-4 left-6 right-6 bg-gray-950/90 border border-gray-700 rounded-lg p-4 shadow-md backdrop-blur">
           <p class="text-xs uppercase font-bold text-blue-300 tracking-wider">நேரலை துணை தலைப்புகள் (Tamil & English):</p>
           <p class="text-base sm:text-lg font-medium text-white mt-1 leading-snug" id="liveSubtitleText">
             "கார்த்திக்: கிருஷ்ணன் ஐயா, 1983ல் சென்னை சென்ட்ரலில் முதல் எலக்ட்ரிக் என்ஜின் வந்தபோது உங்கள் அனுபவம் எப்படி இருந்தது?"
@@ -929,50 +929,50 @@
       </div>
 
       <!-- Quick Conversation Prompts -->
-      <div class="bg-slate-950 px-6 py-2.5 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 overflow-x-auto gap-2">
+      <div class="bg-gray-950 px-6 py-2.5 border-t border-gray-800 flex items-center justify-between text-xs text-gray-400 overflow-x-auto gap-2">
         <span class="font-bold text-blue-200 whitespace-nowrap">பரிந்துரைக்கப்பட்ட தலைப்புகள்:</span>
-        <button onclick="injectCallPrompt('கார்த்திக் தம்பி, மார்கழி கச்சேரியில் எம்.எஸ். அம்மா பாடல் கேட்டதுண்டா?')" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg whitespace-nowrap">
-          🎶 மார்கழி இசை விழா
+        <button onclick="injectCallPrompt('கார்த்திக் தம்பி, மார்கழி கச்சேரியில் எம்.எஸ். அம்மா பாடல் கேட்டதுண்டா?')" class="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg whitespace-nowrap">
+           மார்கழி இசை விழா
         </button>
-        <button onclick="injectCallPrompt('1970களில் சென்னை சென்ட்ரல் நீராவி ரயில் பணி நினைவுகள்!')" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg whitespace-nowrap">
-          🚂 தென்னக ரயில்வே நினைவுகள்
+        <button onclick="injectCallPrompt('1970களில் சென்னை சென்ட்ரல் நீராவி ரயில் பணி நினைவுகள்!')" class="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg whitespace-nowrap">
+           தென்னக ரயில்வே நினைவுகள்
         </button>
-        <button onclick="injectCallPrompt('அண்ணா பல்கலைக்கழக கிண்டி வளாகக் கல்லூரி வாழ்க்கை!')" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg whitespace-nowrap">
-          🎓 கிண்டி கல்லூரி வாழ்க்கை
+        <button onclick="injectCallPrompt('அண்ணா பல்கலைக்கழக கிண்டி வளாகக் கல்லூரி வாழ்க்கை!')" class="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg whitespace-nowrap">
+           கிண்டி கல்லூரி வாழ்க்கை
         </button>
       </div>
 
       <!-- Senior Call Controls (Large, Respectful Tamil Buttons & Emojis) -->
-      <div class="bg-slate-950 px-6 py-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
+      <div class="bg-gray-950 px-6 py-5 border-t border-gray-800 flex flex-wrap items-center justify-between gap-4">
         
         <div class="flex items-center gap-2 sm:gap-3">
           <!-- Speak Slower Request (Huge Senior Help) -->
-          <button onclick="requestSpeakSlower()" class="px-3 sm:px-4 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 border border-amber-500/40 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-1.5">
-            <span>🐢</span>
+          <button onclick="requestSpeakSlower()" class="px-3 sm:px-4 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-200 border border-amber-500/40 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-1.5">
+            <span></span>
             <span>கொஞ்சம் மெதுவாகப் பேசுங்கள்</span>
           </button>
 
           <!-- Tamil Cultural Reactions: Vanakkam, Filter Coffee, Blessings -->
-          <button onclick="sendCulturalReaction('🙏', 'வணக்கம் (Vanakkam)')" class="px-3 py-3 bg-amber-400/20 hover:bg-amber-400/30 text-blue-200 border border-amber-400/40 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-1">
-            <span>🙏</span> <span>வணக்கம்</span>
+          <button onclick="sendCulturalReaction('', 'வணக்கம் (Vanakkam)')" class="px-3 py-3 bg-amber-400/20 hover:bg-amber-400/30 text-blue-200 border border-amber-400/40 rounded-lg text-xs sm:text-sm font-bold flex items-center gap-1">
+            <span></span> <span>வணக்கம்</span>
           </button>
-          <button onclick="sendCulturalReaction('☕', 'பில்டர் காபி (Kaapi)')" class="px-3 py-3 bg-orange-500/20 hover:bg-orange-500/30 text-orange-300 border border-orange-500/40 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-1">
-            <span>☕</span> <span>காபி</span>
+          <button onclick="sendCulturalReaction('', 'பில்டர் காபி (Kaapi)')" class="px-3 py-3 bg-white text-gray-700 border border-gray-300 hover:bg-white rounded-lg text-xs sm:text-sm font-bold flex items-center gap-1">
+            <span></span> <span>காபி</span>
           </button>
-          <button onclick="sendCulturalReaction('🌸', 'ஆசிகள் (Blessings)')" class="px-3 py-3 bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-1">
-            <span>🌸</span> <span>ஆசிகள்</span>
+          <button onclick="sendCulturalReaction('', 'ஆசிகள் (Blessings)')" class="px-3 py-3 bg-white text-gray-700 border border-gray-300 hover:bg-white rounded-lg text-xs sm:text-sm font-bold flex items-center gap-1">
+            <span></span> <span>ஆசிகள்</span>
           </button>
         </div>
 
         <!-- Mute & End Call Controls -->
         <div class="flex items-center gap-2 sm:gap-3">
-          <button onclick="toggleAudioMute()" id="muteBtn" class="px-4 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 border border-slate-700">
-            <span>🎙️</span>
+          <button onclick="toggleAudioMute()" id="muteBtn" class="px-4 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-xs sm:text-sm font-bold flex items-center gap-2 border border-gray-700">
+            <span></span>
             <span id="muteBtnText">Mute</span>
           </button>
 
-          <button onclick="endCall()" class="px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs sm:text-sm font-black shadow-lg flex items-center gap-2">
-            <span>🛑</span>
+          <button onclick="endCall()" class="px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs sm:text-sm font-black shadow-sm flex items-center gap-2">
+            <span></span>
             <span>உரையாடலை முடிக்க (End)</span>
           </button>
         </div>
@@ -985,23 +985,23 @@
   <!-- ========================================================================= -->
   <!-- 5. INNOVATION MODAL: KADHAI PETTI (கதை பெட்டி) LIFE STORY RECORDER         -->
   <!-- ========================================================================= -->
-  <div id="kadhaiModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-xl w-full max-w-xl overflow-hidden shadow-2xl border border-amber-200">
+  <div id="kadhaiModal" class="fixed inset-0 bg-gray-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-lg w-full max-w-xl overflow-hidden shadow-md border border-amber-200">
       
-      <div class="bg-gradient-to-r from-amber-600 to-amber-700 p-6 text-white text-center relative">
-        <span class="text-3xl">🎙️</span>
+      <div class=" from-amber-600 to-amber-700 p-6 text-white text-center relative">
+        <span class="text-3xl"></span>
         <h3 class="text-2xl font-bold mt-2">கதை பெட்டி • வாழ்வியல் கதைப் பதிவேடு</h3>
         <p class="text-xs text-amber-100 mt-1">நீங்கள் குரல்வழியாகப் பேசுங்கள். எங்களின் ஏ.ஐ. உங்கள் நினைவுகளைக் குடும்பப் பொக்கிஷமாகச் சேமிக்கும்.</p>
       </div>
 
       <div class="p-6 space-y-4">
         <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">கதையின் தலைப்பு (Story Title)</label>
-          <input type="text" id="kadhaiTitleInput" value="1983ல் சென்னை சென்ட்ரலில் முதல் மின்சார ரயில் பயணம்" class="w-full text-sm font-semibold p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 outline-none">
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">கதையின் தலைப்பு (Story Title)</label>
+          <input type="text" id="kadhaiTitleInput" value="1983ல் சென்னை சென்ட்ரலில் முதல் மின்சார ரயில் பயணம்" class="w-full text-sm font-semibold p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
         </div>
 
         <!-- Waveform Simulation Box -->
-        <div class="bg-slate-900 rounded-2xl p-6 text-center text-white" id="recordingIndicatorBox">
+        <div class="bg-gray-900 rounded-lg p-6 text-center text-white" id="recordingIndicatorBox">
           <p class="text-xs text-blue-300 font-mono mb-3" id="kadhaiRecordingStatus">● மைக்ரோஃபோன் தயார் (Ready to Record)</p>
           <div class="flex items-center justify-center h-12" id="waveContainer">
             <span class="audio-wave"></span>
@@ -1010,16 +1010,16 @@
             <span class="audio-wave"></span>
             <span class="audio-wave"></span>
           </div>
-          <p class="text-xs text-slate-300 mt-3 italic" id="kadhaiLiveTranscription">
+          <p class="text-xs text-gray-300 mt-3 italic" id="kadhaiLiveTranscription">
             "பேசத் தொடங்க கீழே உள்ள 'பதிவு செய்க' பொத்தானை அழுத்தவும்..."
           </p>
         </div>
 
         <div class="flex gap-3">
-          <button onclick="toggleKadhaiRecording()" id="btnRecordKadhai" class="flex-1 py-3.5 bg-blue-600 hover:bg-blue-700 text-slate-950 font-bold rounded-xl text-sm transition shadow flex items-center justify-center gap-2">
-            <span>🔴</span> <span id="recordBtnLabel">பதிவைத் தொடங்குக (Start Speaking)</span>
+          <button onclick="toggleKadhaiRecording()" id="btnRecordKadhai" class="flex-1 py-3.5 bg-blue-600 hover:bg-blue-700 text-gray-950 font-bold rounded-lg text-sm transition shadow flex items-center justify-center gap-2">
+            <span></span> <span id="recordBtnLabel">பதிவைத் தொடங்குக (Start Speaking)</span>
           </button>
-          <button onclick="closeKadhaiModal()" class="px-5 py-3.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-xl text-sm">
+          <button onclick="closeKadhaiModal()" class="px-5 py-3.5 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold rounded-lg text-sm">
             மூடுக (Close)
           </button>
         </div>
@@ -1031,53 +1031,53 @@
   <!-- ========================================================================= -->
   <!-- 6. NSS NATIONAL SERVICE CERTIFICATE MODAL                                 -->
   <!-- ========================================================================= -->
-  <div id="certModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-xl w-full max-w-2xl overflow-hidden shadow-2xl border border-slate-200">
+  <div id="certModal" class="fixed inset-0 bg-gray-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-lg w-full max-w-2xl overflow-hidden shadow-md border border-gray-200">
       
       <!-- Certificate Visual -->
       <div class="p-8 sm:p-10 border-8 border-indigo-950 bg-amber-50/50 relative text-center space-y-4" id="printableCert">
         
         <!-- Ashoka Chakra / Award Seal -->
-        <div class="mx-auto w-16 h-16 rounded-full bg-amber-400 border-4 border-amber-500 text-slate-900 flex items-center justify-center text-3xl font-black shadow-md">
+        <div class="mx-auto w-16 h-16 rounded-md bg-amber-400 border-4 border-amber-500 text-gray-900 flex items-center justify-center text-3xl font-black shadow-md">
           ★
         </div>
 
         <div>
-          <span class="text-xs uppercase font-extrabold tracking-widest text-slate-900">National Service Scheme (NSS) • தமிழ்நாடு இளைஞர் தோழமைத் திட்டம்</span>
-          <h2 class="text-3xl font-black text-slate-900 mt-1 font-serif">Certificate of Community Empathy</h2>
-          <p class="text-xs text-slate-500">Elder Companion Initiative (முதியோர் தோழன் மாநிலத் திட்டம்)</p>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-gray-900">National Service Scheme (NSS) • தமிழ்நாடு இளைஞர் தோழமைத் திட்டம்</span>
+          <h2 class="text-3xl font-black text-gray-900 mt-1 font-serif">Certificate of Community Empathy</h2>
+          <p class="text-xs text-gray-500">Elder Companion Initiative (முதியோர் தோழன் மாநிலத் திட்டம்)</p>
         </div>
 
-        <p class="text-xs text-slate-600">This is to officially certify that Youth Volunteer</p>
-        <p class="text-2xl font-black text-slate-900 font-serif border-b-2 border-slate-300 pb-1 inline-block px-8">
+        <p class="text-xs text-gray-600">This is to officially certify that Youth Volunteer</p>
+        <p class="text-2xl font-black text-gray-900 font-serif border-b-2 border-gray-300 pb-1 inline-block px-8">
           Karthik Subramanian (Anna University)
         </p>
 
-        <p class="text-xs text-slate-700 max-w-lg mx-auto leading-relaxed">
-          Has actively contributed <strong class="text-slate-950 text-sm font-bold" id="certHoursNumber">22.5 மணிநேரம் (Verified Hours)</strong> toward elder companionship, oral history preservation in Kadhai Petti, and safe digital literacy for senior citizens with exemplary empathy.
+        <p class="text-xs text-gray-700 max-w-lg mx-auto leading-relaxed">
+          Has actively contributed <strong class="text-gray-950 text-sm font-bold" id="certHoursNumber">22.5 மணிநேரம் (Verified Hours)</strong> toward elder companionship, oral history preservation in Kadhai Petti, and safe digital literacy for senior citizens with exemplary empathy.
         </p>
 
-        <div class="pt-6 grid grid-cols-2 gap-8 text-xs text-slate-600 border-t border-slate-300">
+        <div class="pt-6 grid grid-cols-2 gap-8 text-xs text-gray-600 border-t border-gray-300">
           <div>
-            <p class="font-serif italic text-base text-slate-800">Prof. K. S. Ramanathan, Ph.D.</p>
-            <p class="border-t border-slate-400 pt-1 mt-1 font-semibold">State Program Director, NSS Tamil Nadu</p>
+            <p class="font-serif italic text-base text-gray-800">Prof. K. S. Ramanathan, Ph.D.</p>
+            <p class="border-t border-gray-400 pt-1 mt-1 font-semibold">State Program Director, NSS Tamil Nadu</p>
           </div>
           <div>
-            <p class="font-mono text-xs text-slate-800 font-bold">VERIFIED-ID: NSS-TN-2026-8812</p>
-            <p class="border-t border-slate-400 pt-1 mt-1 font-semibold">Government of India Empathy Seal</p>
+            <p class="font-mono text-xs text-gray-800 font-bold">VERIFIED-ID: NSS-TN-2026-8812</p>
+            <p class="border-t border-gray-400 pt-1 mt-1 font-semibold">Government of India Empathy Seal</p>
           </div>
         </div>
 
       </div>
 
       <!-- Action Buttons -->
-      <div class="bg-slate-100 px-6 py-4 flex items-center justify-between border-t border-slate-200">
-        <span class="text-xs text-slate-500">Recognized for NSS credits & Higher Education applications</span>
+      <div class="bg-gray-100 px-6 py-4 flex items-center justify-between border-t border-gray-200">
+        <span class="text-xs text-gray-500">Recognized for NSS credits & Higher Education applications</span>
         <div class="flex gap-2">
-          <button onclick="window.print()" class="px-4 py-2 bg-indigo-900 hover:bg-indigo-950 text-white rounded-xl text-xs font-semibold shadow">
+          <button onclick="window.print()" class="px-4 py-2 bg-indigo-900 hover:bg-indigo-950 text-white rounded-lg text-xs font-semibold shadow">
             🖨️ Print / Save PDF
           </button>
-          <button onclick="closeCertificateModal()" class="px-4 py-2 bg-slate-300 hover:bg-slate-400 text-slate-800 rounded-xl text-xs font-semibold">
+          <button onclick="closeCertificateModal()" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-lg text-xs font-semibold">
             Close
           </button>
         </div>
@@ -1087,10 +1087,10 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-white border-t border-slate-200 py-4 px-6 text-center text-xs text-slate-500 mt-auto">
+  <footer class="bg-white border-t border-gray-200 py-4 px-6 text-center text-xs text-gray-500 mt-auto">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <p><strong>Elder Companion (முதியோர் தோழன்)</strong> — பாசம், துணை மற்றும் தலைமுறை இணைப்பு.</p>
-      <p class="text-slate-400">ScamGuard India Protected • தமிழ் & English WCAG AAA Accessibility Standards</p>
+      <p class="text-gray-400">ScamGuard India Protected • தமிழ் & English WCAG AAA Accessibility Standards</p>
     </div>
   </footer>
 
@@ -1131,18 +1131,18 @@
       const tabC = document.getElementById('tabCaregiverLogin');
 
       [tabS, tabV, tabC].forEach(t => {
-        t.className = "py-2 px-2 text-xs font-semibold rounded-xl transition-all text-slate-600 hover:text-slate-900 text-center";
+        t.className = "py-2 px-2 text-xs font-semibold rounded-lg transition-all text-gray-600 hover:text-gray-900 text-center";
       });
 
       if (role === 'senior') {
         document.getElementById('seniorLoginFormPanel').classList.remove('hidden');
-        tabS.className = "py-2 px-2 text-xs font-bold rounded-xl transition-all bg-amber-400 text-slate-950 shadow-sm text-center";
+        tabS.className = "py-2 px-2 text-xs font-bold rounded-lg transition-all bg-amber-400 text-gray-950 shadow-sm text-center";
       } else if (role === 'volunteer') {
         document.getElementById('volunteerLoginFormPanel').classList.remove('hidden');
-        tabV.className = "py-2 px-2 text-xs font-bold rounded-xl transition-all bg-blue-700 text-white shadow-sm text-center";
+        tabV.className = "py-2 px-2 text-xs font-bold rounded-lg transition-all bg-blue-700 text-white shadow-sm text-center";
       } else {
         document.getElementById('caregiverLoginFormPanel').classList.remove('hidden');
-        tabC.className = "py-2 px-2 text-xs font-bold rounded-xl transition-all bg-purple-600 text-white shadow-sm text-center";
+        tabC.className = "py-2 px-2 text-xs font-bold rounded-lg transition-all bg-purple-600 text-white shadow-sm text-center";
       }
     }
 
@@ -1190,19 +1190,19 @@
       const btnC = document.getElementById('navBtnCaregiver');
 
       [btnS, btnV, btnC].forEach(b => {
-        b.className = "px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800";
+        b.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-indigo-200 hover:text-white hover:bg-indigo-800";
       });
 
       if (role === 'senior') {
         document.getElementById('seniorView').classList.remove('hidden');
-        btnS.className = "px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-amber-400 text-slate-950 shadow";
+        btnS.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-amber-400 text-gray-950 shadow";
       } else if (role === 'volunteer') {
         document.getElementById('volunteerView').classList.remove('hidden');
-        btnV.className = "px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-blue-700 text-white shadow";
+        btnV.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-blue-700 text-white shadow";
         announce("Switched to Volunteer Portal (Karthik Subramanian, NSS Anna University).");
       } else if (role === 'caregiver') {
         document.getElementById('caregiverView').classList.remove('hidden');
-        btnC.className = "px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-purple-600 text-white shadow";
+        btnC.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-purple-600 text-white shadow";
         announce("Switched to Family Caregiver Portal (Senthil Krishnan, Bengaluru).");
       }
     }
@@ -1293,7 +1293,7 @@
               initializeJitsi();
           })
           .catch(function(err) {
-              alert("⚠️ வீடியோ அழைப்பிற்கு கேமரா மற்றும் மைக்ரோஃபோன் அனுமதியை (Allow) வழங்கவும்.");
+              alert(" வீடியோ அழைப்பிற்கு கேமரா மற்றும் மைக்ரோஃபோன் அனுமதியை (Allow) வழங்கவும்.");
               initializeJitsi(); // Try loading anyway
           });
       } else {
@@ -1379,7 +1379,7 @@
     }
 
     function requestSpeakSlower() {
-      document.getElementById('liveSubtitleText').textContent = "⚠️ கார்த்திக், தயவுசெய்து மெதுவாகப் பேசுங்கள்... (Requested to speak slower)";
+      document.getElementById('liveSubtitleText').textContent = " கார்த்திக், தயவுசெய்து மெதுவாகப் பேசுங்கள்... (Requested to speak slower)";
       if (jitsiApi) jitsiApi.executeCommand('sendChatMessage', 'தயவுசெய்து மெதுவாகப் பேசுங்கள் (Please speak slower)', '', true);
     }
 
@@ -1387,10 +1387,10 @@
       const overlay = document.getElementById('reactionsOverlay');
       const emoji = document.createElement('div');
       emoji.textContent = symbol;
-      emoji.className = "absolute bottom-10 left-1/2 -translate-x-1/2 text-6xl animate-[bounce_2s_ease-out_forwards] opacity-0";
+      emoji.className = "absolute bottom-10 left-1/2 -trangray-x-1/2 text-6xl animate-[bounce_2s_ease-out_forwards] opacity-0";
       overlay.appendChild(emoji);
       setTimeout(() => emoji.remove(), 2000);
-      document.getElementById('liveSubtitleText').textContent = `✨ நீங்கள் '${name}' அனுப்பினீர்கள்!`;
+      document.getElementById('liveSubtitleText').textContent = ` நீங்கள் '${name}' அனுப்பினீர்கள்!`;
       
       if (jitsiApi) {
           try { jitsiApi.executeCommand('sendEndpointTextMessage', '', `Reaction: ${symbol} ${name}`); } catch(e){}
@@ -1415,7 +1415,7 @@
     }
 
     function injectCallPrompt(prompt) {
-      document.getElementById('liveSubtitleText').textContent = "💡 தலைப்பு: " + prompt;
+      document.getElementById('liveSubtitleText').textContent = " தலைப்பு: " + prompt;
     }
 
     function endCall() {
@@ -1468,12 +1468,12 @@
       const live = document.getElementById('kadhaiLiveTranscription');
 
       if (isKadhaiRecording) {
-        status.textContent = "🔴 குரல் பதிவு செய்யப்படுகிறது (Recording... 00:18)";
+        status.textContent = " குரல் பதிவு செய்யப்படுகிறது (Recording... 00:18)";
         status.className = "text-xs text-rose-400 font-mono mb-3 animate-pulse";
         label.textContent = "பதிவை முடித்துச் சேமிக்க (Finish & Save)";
         live.textContent = "கிருஷ்ணன் ஐயா: '1983ல் சென்னை சென்ட்ரலில் எலக்ட்ரிக் என்ஜின் வந்தபோது, ஒட்டுமொத்த தென்னக இரயில்வேயும் கொண்டாடியது...'";
       } else {
-        status.textContent = "✅ கதை பெட்டகத்தில் பாதுகாக்கப்பட்டது! (Saved to Kadhai Petti)";
+        status.textContent = " கதை பெட்டகத்தில் பாதுகாக்கப்பட்டது! (Saved to Kadhai Petti)";
         status.className = "text-xs text-emerald-400 font-mono mb-3";
         label.textContent = "புதிய கதையைப் பதிவு செய்க";
         live.textContent = "ஏ.ஐ. மூலம் தமிழ் & ஆங்கில எழுத்து வடிவம் உருவாக்கப்பட்டு குடும்பத்திற்கு அனுப்பப்பட்டது.";
@@ -1676,7 +1676,7 @@
         isFallbackSynthActive = false;
 
         // Visual loading state
-        btn.className = "px-5 py-3 bg-blue-600 hover:bg-blue-700 text-slate-950 font-black text-sm rounded-xl shadow-lg transition flex items-center gap-2";
+        btn.className = "px-5 py-3 bg-blue-600 hover:bg-blue-700 text-gray-950 font-black text-sm rounded-lg shadow-sm transition flex items-center gap-2";
         icon.textContent = "⏳";
         text.textContent = radioFreq + " FM இணைக்கப்படுகிறது...";
         track.innerHTML = `⏳ <strong>${radioFreq} MHz நேரலை வானொலி இணைக்கப்படுகிறது...</strong> (Connecting to Live Stream...)`;
@@ -1697,7 +1697,7 @@
         stopRadioSynth();
         stopEqualizerAnimation();
 
-        btn.className = "px-5 py-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm rounded-xl shadow-lg transition flex items-center gap-2";
+        btn.className = "px-5 py-3 bg-amber-400 hover:bg-amber-300 text-gray-950 font-black text-sm rounded-lg shadow-sm transition flex items-center gap-2";
         icon.textContent = "▶️";
         text.textContent = radioFreq + " FM ஒலிக்க (Play)";
         track.textContent = "வானொலி தற்காலிகமாக நிறுத்தப்பட்டுள்ளது. மீண்டும் கேட்க 'Play' அழுத்தவும்.";
@@ -1719,10 +1719,10 @@
         // Fallback to soothing Mohanam Rāga synth if network streams fail
         console.warn("All live streams exhausted. Activating Mohanam Raga classical synth fallback.");
         isFallbackSynthActive = true;
-        btn.className = "px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-black text-sm rounded-xl shadow-lg transition flex items-center gap-2";
+        btn.className = "px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-black text-sm rounded-lg shadow-sm transition flex items-center gap-2";
         icon.textContent = "⏹️";
         text.textContent = radioFreq + " FM நிறுத்து (Stop Radio)";
-        track.innerHTML = `📻 <strong>${radioFreq} MHz (${radioStationName})</strong> • நேரலை பாரம்பரிய மோகன ராக இசை (இளையராஜா / எம்.எஸ்.சுப்புலட்சுமி கீதம்)`;
+        track.innerHTML = ` <strong>${radioFreq} MHz (${radioStationName})</strong> • நேரலை பாரம்பரிய மோகன ராக இசை (இளையராஜா / எம்.எஸ்.சுப்புலட்சுமி கீதம்)`;
         startRadioSynth();
         startEqualizerAnimation();
         announce(`வானொலி இயங்குகிறது: ${radioFreq} MHz மோகன ராக இசை`);
@@ -1741,12 +1741,12 @@
 
       audio.onplaying = function() {
         if (!isRadioPlaying) return;
-        btn.className = "px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-black text-sm rounded-xl shadow-lg transition flex items-center gap-2";
+        btn.className = "px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-black text-sm rounded-lg shadow-sm transition flex items-center gap-2";
         icon.textContent = "⏹️";
         text.textContent = radioFreq + " FM நிறுத்து (Stop Radio)";
-        track.innerHTML = `🟢 <strong>நேரலை ஒலிபரப்பு: ${radioFreq} MHz (${radioStationName})</strong> • நேரலை பாடல் & செய்திகள் ஒலிபரப்பாகிறது 📻🎶`;
+        track.innerHTML = `🟢 <strong>நேரலை ஒலிபரப்பு: ${radioFreq} MHz (${radioStationName})</strong> • நேரலை பாடல் & செய்திகள் ஒலிபரப்பாகிறது `;
         startEqualizerAnimation();
-        announce(`${radioFreq} MHz ${radioStationName} நேரலை வானொலி ஒலிக்கிறது 🎶`);
+        announce(`${radioFreq} MHz ${radioStationName} நேரலை வானொலி ஒலிக்கிறது `);
       };
 
       audio.onwaiting = function() {
@@ -1796,15 +1796,15 @@
       const b100 = document.getElementById('freq100Btn');
       const b105 = document.getElementById('freq105Btn');
       [b102, b100, b105].forEach(b => {
-        if (b) b.className = "px-2.5 py-1 rounded-lg font-semibold text-slate-300 hover:text-white";
+        if (b) b.className = "px-2.5 py-1 rounded-lg font-semibold text-gray-300 hover:text-white";
       });
 
       if (freq === '102.1' && b102) {
-        b102.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-slate-950 shadow";
+        b102.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-gray-950 shadow";
       } else if (freq === '100.5' && b100) {
-        b100.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-slate-950 shadow";
+        b100.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-gray-950 shadow";
       } else if (freq === '105.0' && b105) {
-        b105.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-slate-950 shadow";
+        b105.className = "px-2.5 py-1 rounded-lg font-bold bg-amber-400 text-gray-950 shadow";
       }
 
       if (isRadioPlaying) {
